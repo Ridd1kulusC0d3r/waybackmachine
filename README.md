@@ -35,6 +35,19 @@ Para OSINT, a combinação de partida é **CDX API + waymore + uma biblioteca Py
 | Evitar vieses que sabotam a investigação | [docs/06-psicologia-investigativa.md](docs/06-psicologia-investigativa.md) |
 | Limites éticos e de OPSEC | [docs/07-etica-e-opsec.md](docs/07-etica-e-opsec.md) |
 
+## Curadoria ampliada
+
+**15 ferramentas e referências · 13 guias externos · 6 laboratórios avançados.**
+
+| Próximo objetivo | Material |
+|---|---|
+| Escolher entre Wayback, captura local e outro acervo | [Ecossistema e preservação](docs/08-ecossistema-e-preservacao.md) |
+| Praticar hipóteses, cronologia e comparação | [Laboratórios avançados](docs/09-laboratorios-avancados.md) |
+| Resolver falhas de coleta e replay | [Diagnóstico e qualidade](docs/10-diagnostico-e-qualidade.md) |
+| Registrar uma comparação reproduzível | [Ficha de comparação](templates/comparacao-temporal.md) |
+
+Os oito recursos iniciais focam Wayback e descoberta de URLs; os sete adicionais cobrem preservação, replay, WARC e um acervo complementar. São referências documentais, sem incorporação de código externo.
+
 ## Mapa de repositórios
 
 <!-- tools:begin -->
@@ -48,6 +61,13 @@ Para OSINT, a combinação de partida é **CDX API + waymore + uma biblioteca Py
 | [hartator/wayback-machine-downloader](https://github.com/hartator/wayback-machine-downloader) | Recupera arquivos arquivados, com filtros por período, URL e extensão. | **Útil para reconstrução local.** |
 | [internetarchive/wayback-machine-webextension](https://github.com/internetarchive/wayback-machine-webextension) | Extensão oficial para salvar páginas e acessar capturas antigas e recentes. | **Melhor começo sem programação, especialmente durante pesquisa manual.** |
 | [internetarchive/wayback — CDX Server](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) | Código e documentação do serviço de consulta ao índice de capturas. | **Referência técnica essencial: ajuda a entender os dados que as outras ferramentas consultam.** |
+| [webrecorder/pywb](https://github.com/webrecorder/pywb) | Reproduz e grava arquivos web em uma infraestrutura própria. | **Escolha para servir coleções WARC e estudar replay.** |
+| [webrecorder/warcio](https://github.com/webrecorder/warcio) | Lê e escreve registros WARC e lê ARC em streaming. | **Útil para inspecionar metadados e extrair respostas de arquivos locais.** |
+| [webrecorder/browsertrix-crawler](https://github.com/webrecorder/browsertrix-crawler) | Realiza captura com navegador em um contêiner Docker. | **Opção para capturas reproduzíveis de páginas que dependem de navegador.** |
+| [webrecorder/archiveweb.page](https://github.com/webrecorder/archiveweb.page) | Grava navegação no navegador para construir um arquivo web. | **Útil em preservação manual de páginas interativas.** |
+| [webrecorder/replayweb.page](https://github.com/webrecorder/replayweb.page) | Reproduz arquivos web diretamente no navegador. | **Bom para revisar e compartilhar coleções preservadas em formatos suportados.** |
+| [ArchiveBox/ArchiveBox](https://github.com/ArchiveBox/ArchiveBox) | Organiza um arquivo próprio de URLs e salva conteúdo em múltiplos formatos. | **Útil para coleções de pesquisa e preservação recorrente.** |
+| [arquivo/pwa-technologies](https://github.com/arquivo/pwa-technologies) | Documenta tecnologias e APIs do Arquivo.pt, incluindo pesquisa de arquivos web. | **Fonte complementar para comparar cobertura com a Wayback.** |
 <!-- tools:end -->
 
 Fichas completas e filtro por papel (descobrir, recuperar, analisar, preservar): [docs/catalogo.md](docs/catalogo.md). Dados-fonte: [`data/tools.json`](data/tools.json) — para adicionar uma ferramenta, edite o JSON e rode `make catalog`.
@@ -74,6 +94,13 @@ Entender o que está por baixo ......... CDX Server (referência)
 | 4 | [CDX Server API — documentação oficial](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) | Enumeração, datas, filtros, campos, deduplicação e paginação. |
 | 5 | [Waybackpy — documentação](https://akamhy.github.io/waybackpy/) | Uso das APIs por Python e terminal. |
 | 6 | [Wayback (EDGI) — documentação](https://wayback.readthedocs.io/en/stable/) | Pesquisa e recuperação de capturas em scripts. |
+| 7 | [pywb — documentação](https://pywb.readthedocs.io/en/latest/) | Coleções locais, reprodução e gravação de arquivos web. |
+| 8 | [warcio — guia do mantenedor](https://github.com/webrecorder/warcio) | Registros WARC/ARC, cabeçalhos e leitura em streaming. |
+| 9 | [Browsertrix Crawler — guia do projeto](https://github.com/webrecorder/browsertrix-crawler) | Captura automatizada com navegador e Docker. |
+| 10 | [ArchiveWeb.page — guia do projeto](https://github.com/webrecorder/archiveweb.page) | Preservação manual de navegação. |
+| 11 | [ReplayWeb.page — documentação](https://replayweb.page/docs/) | Abrir e revisar arquivos web no navegador. |
+| 12 | [Arquivo.pt — APIs](https://github.com/arquivo/pwa-technologies/wiki/APIs) | Pesquisa complementar em outro acervo. |
+| 13 | [ArchiveBox — documentação](https://docs.archivebox.io/latest/) | Organização e configuração de um arquivo próprio. |
 <!-- guides:end -->
 
 Material do Internet Archive ou dos próprios mantenedores. Versão comentada em [docs/03-trilha-de-estudo.md](docs/03-trilha-de-estudo.md).

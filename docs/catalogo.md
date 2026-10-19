@@ -2,7 +2,7 @@
 
 > Gerado por `scripts/build_catalog.py` a partir de `data/tools.json`. Não edite à mão.
 
-_Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi executada na curadoria inicial: status 'documentado' significa lido, não testado._
+_Curadoria documental ampliada em 2026-10-19. Status documentado significa leitura da documentação, não execução nem auditoria de manutenção ou segurança. Recursos complementares preservam ou reproduzem arquivos web; não são necessariamente clientes da Wayback. Cada projeto mantém sua própria licença._
 
 ## Por papel na investigação
 
@@ -14,6 +14,7 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 - [akamhy/waybackpy](https://github.com/akamhy/waybackpy) — Biblioteca Python e CLI para Availability, CDX e Save Page Now.
 - [edgi-govdata-archiving/wayback](https://github.com/edgi-govdata-archiving/wayback) — Cliente Python para pesquisar e recuperar capturas históricas, chamadas mementos.
 - [internetarchive/wayback — CDX Server](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) — Código e documentação do serviço de consulta ao índice de capturas.
+- [arquivo/pwa-technologies](https://github.com/arquivo/pwa-technologies) — Documenta tecnologias e APIs do Arquivo.pt, incluindo pesquisa de arquivos web.
 
 ### Recuperar conteúdo
 
@@ -22,19 +23,30 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 - [edgi-govdata-archiving/wayback](https://github.com/edgi-govdata-archiving/wayback) — Cliente Python para pesquisar e recuperar capturas históricas, chamadas mementos.
 - [hartator/wayback-machine-downloader](https://github.com/hartator/wayback-machine-downloader) — Recupera arquivos arquivados, com filtros por período, URL e extensão.
 - [internetarchive/wayback-machine-webextension](https://github.com/internetarchive/wayback-machine-webextension) — Extensão oficial para salvar páginas e acessar capturas antigas e recentes.
+- [webrecorder/pywb](https://github.com/webrecorder/pywb) — Reproduz e grava arquivos web em uma infraestrutura própria.
+- [webrecorder/replayweb.page](https://github.com/webrecorder/replayweb.page) — Reproduz arquivos web diretamente no navegador.
+- [arquivo/pwa-technologies](https://github.com/arquivo/pwa-technologies) — Documenta tecnologias e APIs do Arquivo.pt, incluindo pesquisa de arquivos web.
 
 ### Analisar no tempo
 
 - [edgi-govdata-archiving/wayback](https://github.com/edgi-govdata-archiving/wayback) — Cliente Python para pesquisar e recuperar capturas históricas, chamadas mementos.
+- [webrecorder/warcio](https://github.com/webrecorder/warcio) — Lê e escreve registros WARC e lê ARC em streaming.
+- [webrecorder/replayweb.page](https://github.com/webrecorder/replayweb.page) — Reproduz arquivos web diretamente no navegador.
 
 ### Preservar páginas
 
 - [akamhy/waybackpy](https://github.com/akamhy/waybackpy) — Biblioteca Python e CLI para Availability, CDX e Save Page Now.
 - [internetarchive/wayback-machine-webextension](https://github.com/internetarchive/wayback-machine-webextension) — Extensão oficial para salvar páginas e acessar capturas antigas e recentes.
+- [webrecorder/pywb](https://github.com/webrecorder/pywb) — Reproduz e grava arquivos web em uma infraestrutura própria.
+- [webrecorder/browsertrix-crawler](https://github.com/webrecorder/browsertrix-crawler) — Realiza captura com navegador em um contêiner Docker.
+- [webrecorder/archiveweb.page](https://github.com/webrecorder/archiveweb.page) — Grava navegação no navegador para construir um arquivo web.
+- [ArchiveBox/ArchiveBox](https://github.com/ArchiveBox/ArchiveBox) — Organiza um arquivo próprio de URLs e salva conteúdo em múltiplos formatos.
 
 ### Referência técnica
 
 - [internetarchive/wayback — CDX Server](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) — Código e documentação do serviço de consulta ao índice de capturas.
+- [webrecorder/warcio](https://github.com/webrecorder/warcio) — Lê e escreve registros WARC e lê ARC em streaming.
+- [arquivo/pwa-technologies](https://github.com/arquivo/pwa-technologies) — Documenta tecnologias e APIs do Arquivo.pt, incluindo pesquisa de arquivos web.
 
 ## Fichas
 
@@ -104,3 +116,66 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 - **Avaliação:** Referência técnica essencial: ajuda a entender os dados que as outras ferramentas consultam.
 - **Cuidado:** Fonte primária; confira a documentação antes de confiar em resumos.
 - **Documentação:** <https://github.com/internetarchive/wayback/blob/master/wayback-cdx-server/README.md>
+
+### webrecorder/pywb
+
+- **Tipo:** lib+server · **Linguagem:** Python · **Status:** documentado
+- **Link:** <https://github.com/webrecorder/pywb>
+- **Serve para:** Reproduz e grava arquivos web em uma infraestrutura própria.
+- **Avaliação:** Escolha para servir coleções WARC e estudar replay.
+- **Cuidado:** Complementar: não equivale a baixar todo o acervo da Wayback.
+- **Documentação:** <https://pywb.readthedocs.io/en/latest/>
+
+### webrecorder/warcio
+
+- **Tipo:** lib+cli · **Linguagem:** Python · **Status:** documentado
+- **Link:** <https://github.com/webrecorder/warcio>
+- **Serve para:** Lê e escreve registros WARC e lê ARC em streaming.
+- **Avaliação:** Útil para inspecionar metadados e extrair respostas de arquivos locais.
+- **Cuidado:** Não descobre capturas na Wayback; exige um arquivo de entrada.
+- **Documentação:** <https://github.com/webrecorder/warcio>
+
+### webrecorder/browsertrix-crawler
+
+- **Tipo:** crawler · **Linguagem:** TypeScript · **Status:** documentado
+- **Link:** <https://github.com/webrecorder/browsertrix-crawler>
+- **Serve para:** Realiza captura com navegador em um contêiner Docker.
+- **Avaliação:** Opção para capturas reproduzíveis de páginas que dependem de navegador.
+- **Cuidado:** Captura o presente; interações, autenticação e recursos ausentes exigem validação.
+- **Documentação:** <https://github.com/webrecorder/browsertrix-crawler>
+
+### webrecorder/archiveweb.page
+
+- **Tipo:** extension · **Linguagem:** JavaScript · **Status:** documentado
+- **Link:** <https://github.com/webrecorder/archiveweb.page>
+- **Serve para:** Grava navegação no navegador para construir um arquivo web.
+- **Avaliação:** Útil em preservação manual de páginas interativas.
+- **Cuidado:** Capturar a navegação não garante que todos os estados da aplicação foram preservados.
+- **Documentação:** <https://github.com/webrecorder/archiveweb.page>
+
+### webrecorder/replayweb.page
+
+- **Tipo:** viewer · **Linguagem:** JavaScript · **Status:** documentado
+- **Link:** <https://github.com/webrecorder/replayweb.page>
+- **Serve para:** Reproduz arquivos web diretamente no navegador.
+- **Avaliação:** Bom para revisar e compartilhar coleções preservadas em formatos suportados.
+- **Cuidado:** Reproduzir um arquivo não confirma a veracidade do conteúdo nem completa recursos ausentes.
+- **Documentação:** <https://replayweb.page/docs/>
+
+### ArchiveBox/ArchiveBox
+
+- **Tipo:** platform · **Linguagem:** Python · **Status:** documentado
+- **Link:** <https://github.com/ArchiveBox/ArchiveBox>
+- **Serve para:** Organiza um arquivo próprio de URLs e salva conteúdo em múltiplos formatos.
+- **Avaliação:** Útil para coleções de pesquisa e preservação recorrente.
+- **Cuidado:** Revise os extratores e integrações habilitados; o comportamento depende da configuração.
+- **Documentação:** <https://docs.archivebox.io/latest/>
+
+### arquivo/pwa-technologies
+
+- **Tipo:** api+reference · **Linguagem:** Várias · **Status:** documentado
+- **Link:** <https://github.com/arquivo/pwa-technologies>
+- **Serve para:** Documenta tecnologias e APIs do Arquivo.pt, incluindo pesquisa de arquivos web.
+- **Avaliação:** Fonte complementar para comparar cobertura com a Wayback.
+- **Cuidado:** Acervo independente: não misture timestamps ou proveniência entre provedores.
+- **Documentação:** <https://github.com/arquivo/pwa-technologies/wiki/APIs>

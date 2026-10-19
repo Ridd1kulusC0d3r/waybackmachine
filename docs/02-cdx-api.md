@@ -10,9 +10,9 @@ Endpoint: `https://web.archive.org/cdx/search/cdx`
 |---|---|---|
 | `timestamp` | Instante da captura (UTC) | Eixo da cronologia |
 | `original` | URL como capturada | Variantes de URL, parâmetros, subdomínios |
-| `statuscode` | Status HTTP | 200 conteúdo · 3xx redirecionamento · 404 sumiu |
+| `statuscode` | Status HTTP | 200 resposta de sucesso · 3xx redirecionamento · 404 observado naquela captura; não prova remoção definitiva |
 | `mimetype` | Tipo de conteúdo | Separar HTML de PDF, JS, imagens |
-| `digest` | Hash do conteúdo | Mesmo digest = mesmo conteúdo bruto |
+| `digest` | Digest do payload indexado | Indício de repetição daquele payload; não representa todos os recursos da página |
 | `length` | Tamanho compactado | Triagem grosseira |
 | `urlkey` | URL normalizada | Agrupar variantes |
 
