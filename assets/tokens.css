@@ -1,0 +1,15 @@
+/* Wayback Atlas — design tokens. Fonte única de verdade da paleta. */
+:root {
+  --wa-ink:    #0B1020; /* fundo principal (dark) / texto (light) */
+  --wa-deep:   #121A33; /* superfícies elevadas */
+  --wa-grid:   #1A2447; /* linhas de grade */
+  --wa-paper:  #F4EFE6; /* fundo (light) / texto (dark) */
+  --wa-amber:  #F5A524; /* acento primário: o ponto de evidência */
+  --wa-amber-d:#C77D00; /* amber para fundo claro (contraste AA) */
+  --wa-cyan:   #3DDBD9; /* acento secundário: linha do tempo, dados */
+  --wa-cyan-d: #0E8F8D; /* cyan para fundo claro */
+  --wa-mute:   #8A93B2; /* texto secundário (dark) */
+  --wa-mute-d: #4A5273; /* texto secundário (light) */
+  --wa-flag:   #FF5C5C; /* alerta: viés, risco, dado não verificado */
+  --wa-font-mono: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+}

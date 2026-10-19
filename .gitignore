@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+# Saídas de coleta: nunca versione evidência bruta por acidente
+out/
+*.meta.json
+!examples/*.meta.json
+.DS_Store

@@ -1,0 +1,30 @@
+name: Sugerir ferramenta ou guia
+description: Proponha uma entrada para o mapa de repositórios
+title: "[ferramenta] "
+labels: ["catálogo"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Link
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: O que faz com a Wayback / CDX / Internet Archive?
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Você executou a ferramenta?
+      options:
+        - Não, só li a documentação
+        - Sim, e descrevo como abaixo
+    validations:
+      required: true
+  - type: textarea
+    id: caveat
+    attributes:
+      label: Limitações, riscos ou cuidados

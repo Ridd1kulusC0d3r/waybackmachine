@@ -1,0 +1,150 @@
+{
+  "schema": 1,
+  "note": "Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi executada na curadoria inicial: status 'documentado' significa lido, não testado.",
+  "roles": {
+    "discover": "Descobrir URLs",
+    "recover": "Recuperar conteúdo",
+    "analyze": "Analisar no tempo",
+    "preserve": "Preservar páginas",
+    "reference": "Referência técnica"
+  },
+  "tools": [
+    {
+      "id": "waymore",
+      "name": "xnl-h4ck3r/waymore",
+      "url": "https://github.com/xnl-h4ck3r/waymore",
+      "kind": "cli",
+      "lang": "Python",
+      "roles": ["discover", "recover"],
+      "purpose": "Descobre URLs em diferentes fontes e baixa respostas arquivadas da Wayback Machine.",
+      "verdict": "Primeira escolha para investigação exploratória: permite pesquisar o conteúdo recuperado, além de listar endereços.",
+      "caveat": "Combina várias fontes; registre a origem de cada resultado.",
+      "status": "documentado"
+    },
+    {
+      "id": "waybackurls",
+      "name": "tomnomnom/waybackurls",
+      "url": "https://github.com/tomnomnom/waybackurls",
+      "kind": "cli",
+      "lang": "Go",
+      "roles": ["discover"],
+      "purpose": "Recebe domínios e retorna URLs conhecidas pela Wayback, incluindo subdomínios.",
+      "verdict": "Melhor opção simples para pipelines: pequena e direta.",
+      "caveat": "A listagem, sozinha, não é análise de conteúdo.",
+      "status": "documentado"
+    },
+    {
+      "id": "gau",
+      "name": "lc/gau",
+      "url": "https://github.com/lc/gau",
+      "kind": "cli",
+      "lang": "Go",
+      "roles": ["discover"],
+      "purpose": "Coleta URLs de Wayback, Common Crawl, OTX e URLScan; oferece filtros e saída JSON.",
+      "verdict": "Boa para ampliar cobertura.",
+      "caveat": "Registre a origem dos resultados para não atribuir tudo à Wayback (use --providers wayback para isolar).",
+      "status": "documentado"
+    },
+    {
+      "id": "waybackpy",
+      "name": "akamhy/waybackpy",
+      "url": "https://github.com/akamhy/waybackpy",
+      "kind": "lib+cli",
+      "lang": "Python",
+      "roles": ["discover", "recover", "preserve"],
+      "purpose": "Biblioteca Python e CLI para Availability, CDX e Save Page Now.",
+      "verdict": "Boa porta de entrada para automação, com exemplos acessíveis.",
+      "caveat": "Save Page Now publica a página no arquivo: avalie o impacto operacional antes de usar.",
+      "docs": "https://akamhy.github.io/waybackpy/",
+      "status": "documentado"
+    },
+    {
+      "id": "wayback-edgi",
+      "name": "edgi-govdata-archiving/wayback",
+      "url": "https://github.com/edgi-govdata-archiving/wayback",
+      "kind": "lib",
+      "lang": "Python",
+      "roles": ["discover", "recover", "analyze"],
+      "purpose": "Cliente Python para pesquisar e recuperar capturas históricas, chamadas mementos.",
+      "verdict": "Candidata para pipelines de pesquisa temporal; documentação dedicada à busca e recuperação.",
+      "caveat": "Cliente de pesquisa/recuperação; a análise temporal fica por sua conta.",
+      "docs": "https://wayback.readthedocs.io/en/stable/",
+      "status": "documentado"
+    },
+    {
+      "id": "wayback-machine-downloader",
+      "name": "hartator/wayback-machine-downloader",
+      "url": "https://github.com/hartator/wayback-machine-downloader",
+      "kind": "cli",
+      "lang": "Ruby",
+      "roles": ["recover"],
+      "purpose": "Recupera arquivos arquivados, com filtros por período, URL e extensão.",
+      "verdict": "Útil para reconstrução local.",
+      "caveat": "Por padrão reúne a última versão de cada arquivo, podendo misturar datas: delimite o período.",
+      "status": "documentado"
+    },
+    {
+      "id": "wayback-webextension",
+      "name": "internetarchive/wayback-machine-webextension",
+      "url": "https://github.com/internetarchive/wayback-machine-webextension",
+      "kind": "extension",
+      "lang": "JavaScript",
+      "roles": ["preserve", "recover"],
+      "purpose": "Extensão oficial para salvar páginas e acessar capturas antigas e recentes.",
+      "verdict": "Melhor começo sem programação, especialmente durante pesquisa manual.",
+      "caveat": "Salvar uma página a torna pública no arquivo.",
+      "status": "documentado"
+    },
+    {
+      "id": "cdx-server",
+      "name": "internetarchive/wayback — CDX Server",
+      "url": "https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server",
+      "kind": "api",
+      "lang": "Java",
+      "roles": ["reference", "discover"],
+      "purpose": "Código e documentação do serviço de consulta ao índice de capturas.",
+      "verdict": "Referência técnica essencial: ajuda a entender os dados que as outras ferramentas consultam.",
+      "caveat": "Fonte primária; confira a documentação antes de confiar em resumos.",
+      "docs": "https://github.com/internetarchive/wayback/blob/master/wayback-cdx-server/README.md",
+      "status": "documentado"
+    }
+  ],
+  "guides": [
+    {
+      "order": 1,
+      "title": "Using the Wayback Machine — Internet Archive",
+      "url": "https://help.archive.org/help/using-the-wayback-machine/",
+      "learn": "Navegação, capturas e limitações do arquivamento."
+    },
+    {
+      "order": 2,
+      "title": "Save Pages in the Wayback Machine",
+      "url": "https://archivesupport.zendesk.com/hc/en-us/articles/360001513491-Save-Pages-in-the-Wayback-Machine",
+      "learn": "Preservação de páginas com Save Page Now e extensões."
+    },
+    {
+      "order": 3,
+      "title": "Wayback Machine APIs — documentação oficial",
+      "url": "https://archive.org/help/wayback_api.php",
+      "learn": "Consulta programática de disponibilidade de capturas."
+    },
+    {
+      "order": 4,
+      "title": "CDX Server API — documentação oficial",
+      "url": "https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server",
+      "learn": "Enumeração, datas, filtros, campos, deduplicação e paginação."
+    },
+    {
+      "order": 5,
+      "title": "Waybackpy — documentação",
+      "url": "https://akamhy.github.io/waybackpy/",
+      "learn": "Uso das APIs por Python e terminal."
+    },
+    {
+      "order": 6,
+      "title": "Wayback (EDGI) — documentação",
+      "url": "https://wayback.readthedocs.io/en/stable/",
+      "learn": "Pesquisa e recuperação de capturas em scripts."
+    }
+  ]
+}

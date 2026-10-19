@@ -1,0 +1,6 @@
+timestamp,original,statuscode,mimetype,digest
+20190314120000,http://example.com/pagina,200,text/html,AAAA
+20190620090000,http://example.com/pagina,200,text/html,AAAA
+20200105101500,http://example.com/pagina,200,text/html,BBBB
+20200809183000,http://example.com/pagina,404,text/html,CCCC
+20210210070000,http://example.com/pagina,200,text/html,BBBB
