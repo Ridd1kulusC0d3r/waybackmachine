@@ -12,7 +12,7 @@ Qualquer pessoa pode pedir ao arquivo que capture uma página, e um operador ate
 | **Plantio de capturas** | Alguém salva uma página (própria ou forjada) para criar uma "prova" datada | Procure capturas isoladas surgidas sem tráfego anterior; exija corroboração independente |
 | **Limpeza** | Remoção ou bloqueio de capturas comprometedoras | Ausência de captura não é ausência de existência; busque outros arquivos (Memento, Common Crawl) |
 | **Isca de atribuição (false flag)** | Idioma, fuso, metadados e nomes plantados para sugerir outro autor | Trate artefatos "culturais" como fracos; privilegie pivôs técnicos consistentes |
-| **Reaproveitamento de domínio** | Domínio com bom histórico reutilizado para golpe | Procure descontinuidade (playbook 4 em [08](08-playbooks-ti.md)) |
+| **Reaproveitamento de domínio** | Domínio com bom histórico reutilizado para golpe | Procure descontinuidade (playbook 4 em [11](11-playbooks-ti.md)) |
 
 Regra: **o adversário controla o que o rastreador viu.** A captura é testemunho de um servidor possivelmente hostil.
 

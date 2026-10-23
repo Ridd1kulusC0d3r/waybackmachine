@@ -9,8 +9,8 @@
 
 Critérios de entrada:
 
-- Faz algo específico com a Wayback Machine / CDX / Internet Archive.
-- Está mantida ou, se não, o `caveat` diz isso.
+- Faz algo específico com Wayback / CDX ou complementa o fluxo com preservação, WARC, replay ou outro acervo claramente identificado.
+- Não afirme manutenção ativa sem verificar atividade e releases; registre limitações conhecidas no `caveat`. Cada recurso novo deve apontar para a fonte primária e declarar o papel no fluxo.
 - `status` honesto: `documentado` (documentação lida), `a-verificar` (sugerida, sem checagem) ou `testado` (você executou; descreva como no PR).
 - `tier`: `core` entra no mapa principal; `complementar` na seção de fontes alternativas.
 - O `verdict` é uma avaliação fundamentada, não propaganda.

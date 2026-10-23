@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "note": "Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi executada na curadoria. Status: 'documentado' = documentação lida na curadoria inicial; 'a-verificar' = entrada complementar sugerida a partir de conhecimento geral, ainda sem checagem da documentação atual.",
+  "note": "Curadoria documental ampliada em 2026-10-19. Status documentado significa leitura da documentação, não execução nem auditoria de manutenção ou segurança. Recursos complementares preservam ou reproduzem arquivos web; não são necessariamente clientes da Wayback. Cada projeto mantém sua própria licença. Entradas 'complementar' com status 'a-verificar' foram sugeridas sem checagem da documentação atual.",
   "roles": {
     "discover": "Descobrir URLs",
     "recover": "Recuperar conteúdo",
@@ -140,6 +140,123 @@
       "tier": "core"
     },
     {
+      "id": "pywb",
+      "name": "webrecorder/pywb",
+      "url": "https://github.com/webrecorder/pywb",
+      "kind": "lib+server",
+      "lang": "Python",
+      "roles": [
+        "recover",
+        "preserve"
+      ],
+      "purpose": "Reproduz e grava arquivos web em uma infraestrutura própria.",
+      "verdict": "Escolha para servir coleções WARC e estudar replay.",
+      "caveat": "Complementar: não equivale a baixar todo o acervo da Wayback.",
+      "docs": "https://pywb.readthedocs.io/en/latest/",
+      "status": "documentado",
+      "tier": "core"
+    },
+    {
+      "id": "warcio",
+      "name": "webrecorder/warcio",
+      "url": "https://github.com/webrecorder/warcio",
+      "kind": "lib+cli",
+      "lang": "Python",
+      "roles": [
+        "analyze",
+        "reference"
+      ],
+      "purpose": "Lê e escreve registros WARC e lê ARC em streaming.",
+      "verdict": "Útil para inspecionar metadados e extrair respostas de arquivos locais.",
+      "caveat": "Não descobre capturas na Wayback; exige um arquivo de entrada.",
+      "docs": "https://github.com/webrecorder/warcio",
+      "status": "documentado",
+      "tier": "core"
+    },
+    {
+      "id": "browsertrix-crawler",
+      "name": "webrecorder/browsertrix-crawler",
+      "url": "https://github.com/webrecorder/browsertrix-crawler",
+      "kind": "crawler",
+      "lang": "TypeScript",
+      "roles": [
+        "preserve"
+      ],
+      "purpose": "Realiza captura com navegador em um contêiner Docker.",
+      "verdict": "Opção para capturas reproduzíveis de páginas que dependem de navegador.",
+      "caveat": "Captura o presente; interações, autenticação e recursos ausentes exigem validação.",
+      "docs": "https://github.com/webrecorder/browsertrix-crawler",
+      "status": "documentado",
+      "tier": "core"
+    },
+    {
+      "id": "archiveweb-page",
+      "name": "webrecorder/archiveweb.page",
+      "url": "https://github.com/webrecorder/archiveweb.page",
+      "kind": "extension",
+      "lang": "JavaScript",
+      "roles": [
+        "preserve"
+      ],
+      "purpose": "Grava navegação no navegador para construir um arquivo web.",
+      "verdict": "Útil em preservação manual de páginas interativas.",
+      "caveat": "Capturar a navegação não garante que todos os estados da aplicação foram preservados.",
+      "docs": "https://github.com/webrecorder/archiveweb.page",
+      "status": "documentado",
+      "tier": "core"
+    },
+    {
+      "id": "replayweb-page",
+      "name": "webrecorder/replayweb.page",
+      "url": "https://github.com/webrecorder/replayweb.page",
+      "kind": "viewer",
+      "lang": "JavaScript",
+      "roles": [
+        "recover",
+        "analyze"
+      ],
+      "purpose": "Reproduz arquivos web diretamente no navegador.",
+      "verdict": "Bom para revisar e compartilhar coleções preservadas em formatos suportados.",
+      "caveat": "Reproduzir um arquivo não confirma a veracidade do conteúdo nem completa recursos ausentes.",
+      "docs": "https://replayweb.page/docs/",
+      "status": "documentado",
+      "tier": "core"
+    },
+    {
+      "id": "archivebox",
+      "name": "ArchiveBox/ArchiveBox",
+      "url": "https://github.com/ArchiveBox/ArchiveBox",
+      "kind": "platform",
+      "lang": "Python",
+      "roles": [
+        "preserve"
+      ],
+      "purpose": "Organiza um arquivo próprio de URLs e salva conteúdo em múltiplos formatos.",
+      "verdict": "Útil para coleções de pesquisa e preservação recorrente.",
+      "caveat": "Revise os extratores e integrações habilitados; o comportamento depende da configuração.",
+      "docs": "https://docs.archivebox.io/latest/",
+      "status": "documentado",
+      "tier": "core"
+    },
+    {
+      "id": "arquivo-pt",
+      "name": "arquivo/pwa-technologies",
+      "url": "https://github.com/arquivo/pwa-technologies",
+      "kind": "api+reference",
+      "lang": "Várias",
+      "roles": [
+        "discover",
+        "recover",
+        "reference"
+      ],
+      "purpose": "Documenta tecnologias e APIs do Arquivo.pt, incluindo pesquisa de arquivos web.",
+      "verdict": "Fonte complementar para comparar cobertura com a Wayback.",
+      "caveat": "Acervo independente: não misture timestamps ou proveniência entre provedores.",
+      "docs": "https://github.com/arquivo/pwa-technologies/wiki/APIs",
+      "status": "documentado",
+      "tier": "core"
+    },
+    {
       "id": "waybackpack",
       "name": "jsvine/waybackpack",
       "url": "https://github.com/jsvine/waybackpack",
@@ -182,21 +299,6 @@
       "purpose": "Agregador Memento: consulta vários arquivos web ao mesmo tempo.",
       "verdict": "Boa para obter uma segunda fonte de arquivamento independente da Wayback.",
       "caveat": "Confirme a lista de arquivos suportados na documentação.",
-      "status": "a-verificar",
-      "tier": "complementar"
-    },
-    {
-      "id": "archivebox",
-      "name": "ArchiveBox/ArchiveBox",
-      "url": "https://github.com/ArchiveBox/ArchiveBox",
-      "kind": "self-hosted",
-      "lang": "Python",
-      "roles": [
-        "preserve"
-      ],
-      "purpose": "Arquivamento web auto-hospedado, sob seu controle.",
-      "verdict": "Alternativa ao Save Page Now quando a página não deve ser pública.",
-      "caveat": "Exige operar e proteger sua própria instância.",
       "status": "a-verificar",
       "tier": "complementar"
     },
@@ -253,6 +355,48 @@
       "title": "Wayback (EDGI) — documentação",
       "url": "https://wayback.readthedocs.io/en/stable/",
       "learn": "Pesquisa e recuperação de capturas em scripts."
+    },
+    {
+      "order": 7,
+      "title": "pywb — documentação",
+      "url": "https://pywb.readthedocs.io/en/latest/",
+      "learn": "Coleções locais, reprodução e gravação de arquivos web."
+    },
+    {
+      "order": 8,
+      "title": "warcio — guia do mantenedor",
+      "url": "https://github.com/webrecorder/warcio",
+      "learn": "Registros WARC/ARC, cabeçalhos e leitura em streaming."
+    },
+    {
+      "order": 9,
+      "title": "Browsertrix Crawler — guia do projeto",
+      "url": "https://github.com/webrecorder/browsertrix-crawler",
+      "learn": "Captura automatizada com navegador e Docker."
+    },
+    {
+      "order": 10,
+      "title": "ArchiveWeb.page — guia do projeto",
+      "url": "https://github.com/webrecorder/archiveweb.page",
+      "learn": "Preservação manual de navegação."
+    },
+    {
+      "order": 11,
+      "title": "ReplayWeb.page — documentação",
+      "url": "https://replayweb.page/docs/",
+      "learn": "Abrir e revisar arquivos web no navegador."
+    },
+    {
+      "order": 12,
+      "title": "Arquivo.pt — APIs",
+      "url": "https://github.com/arquivo/pwa-technologies/wiki/APIs",
+      "learn": "Pesquisa complementar em outro acervo."
+    },
+    {
+      "order": 13,
+      "title": "ArchiveBox — documentação",
+      "url": "https://docs.archivebox.io/latest/",
+      "learn": "Organização e configuração de um arquivo próprio."
     }
   ]
 }

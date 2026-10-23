@@ -34,11 +34,24 @@ Para OSINT, a combinação de partida é **CDX API + waymore + uma biblioteca Py
 | Documentar achados com rigor | [docs/05-cadeia-de-evidencia.md](docs/05-cadeia-de-evidencia.md) |
 | Evitar vieses que sabotam a investigação | [docs/06-psicologia-investigativa.md](docs/06-psicologia-investigativa.md) |
 | Limites éticos e de OPSEC | [docs/07-etica-e-opsec.md](docs/07-etica-e-opsec.md) |
-| Playbooks de inteligência de ameaças (6 cenários) | [docs/08-playbooks-ti.md](docs/08-playbooks-ti.md) |
-| Pivôs e IOCs: força, regras e esquema de compartilhamento | [docs/09-pivos-e-ioc.md](docs/09-pivos-e-ioc.md) |
-| Adversário que engana o arquivo · desgaste do analista | [docs/10-psicologia-do-adversario-e-do-analista.md](docs/10-psicologia-do-adversario-e-do-analista.md) |
-| Receitas de Shell (`awk`, `sort`, `comm`, `jq`) para a CDX | [docs/11-shell-cookbook.md](docs/11-shell-cookbook.md) |
-| Glossário e perguntas frequentes | [docs/12-glossario-e-faq.md](docs/12-glossario-e-faq.md) |
+| Playbooks de inteligência de ameaças (6 cenários) | [docs/11-playbooks-ti.md](docs/11-playbooks-ti.md) |
+| Pivôs e IOCs: força, regras e esquema de compartilhamento | [docs/12-pivos-e-ioc.md](docs/12-pivos-e-ioc.md) |
+| Adversário que engana o arquivo · desgaste do analista | [docs/13-psicologia-do-adversario-e-do-analista.md](docs/13-psicologia-do-adversario-e-do-analista.md) |
+| Receitas de Shell (`awk`, `sort`, `comm`, `jq`) para a CDX | [docs/14-shell-cookbook.md](docs/14-shell-cookbook.md) |
+| Glossário e perguntas frequentes | [docs/15-glossario-e-faq.md](docs/15-glossario-e-faq.md) |
+
+## Curadoria ampliada
+
+**15 ferramentas e referências no mapa principal (+ 4 complementares) · 13 guias externos · 6 laboratórios avançados · 6 playbooks de TI.**
+
+| Próximo objetivo | Material |
+|---|---|
+| Escolher entre Wayback, captura local e outro acervo | [Ecossistema e preservação](docs/08-ecossistema-e-preservacao.md) |
+| Praticar hipóteses, cronologia e comparação | [Laboratórios avançados](docs/09-laboratorios-avancados.md) |
+| Resolver falhas de coleta e replay | [Diagnóstico e qualidade](docs/10-diagnostico-e-qualidade.md) |
+| Registrar uma comparação reproduzível | [Ficha de comparação](templates/comparacao-temporal.md) |
+
+Os oito recursos iniciais focam Wayback e descoberta de URLs; os sete adicionais cobrem preservação, replay, WARC e um acervo complementar. São referências documentais, sem incorporação de código externo.
 
 ## Mapa de repositórios
 
@@ -53,6 +66,13 @@ Para OSINT, a combinação de partida é **CDX API + waymore + uma biblioteca Py
 | [hartator/wayback-machine-downloader](https://github.com/hartator/wayback-machine-downloader) | Recupera arquivos arquivados, com filtros por período, URL e extensão. | **Útil para reconstrução local.** |
 | [internetarchive/wayback-machine-webextension](https://github.com/internetarchive/wayback-machine-webextension) | Extensão oficial para salvar páginas e acessar capturas antigas e recentes. | **Melhor começo sem programação, especialmente durante pesquisa manual.** |
 | [internetarchive/wayback — CDX Server](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) | Código e documentação do serviço de consulta ao índice de capturas. | **Referência técnica essencial: ajuda a entender os dados que as outras ferramentas consultam.** |
+| [webrecorder/pywb](https://github.com/webrecorder/pywb) | Reproduz e grava arquivos web em uma infraestrutura própria. | **Escolha para servir coleções WARC e estudar replay.** |
+| [webrecorder/warcio](https://github.com/webrecorder/warcio) | Lê e escreve registros WARC e lê ARC em streaming. | **Útil para inspecionar metadados e extrair respostas de arquivos locais.** |
+| [webrecorder/browsertrix-crawler](https://github.com/webrecorder/browsertrix-crawler) | Realiza captura com navegador em um contêiner Docker. | **Opção para capturas reproduzíveis de páginas que dependem de navegador.** |
+| [webrecorder/archiveweb.page](https://github.com/webrecorder/archiveweb.page) | Grava navegação no navegador para construir um arquivo web. | **Útil em preservação manual de páginas interativas.** |
+| [webrecorder/replayweb.page](https://github.com/webrecorder/replayweb.page) | Reproduz arquivos web diretamente no navegador. | **Bom para revisar e compartilhar coleções preservadas em formatos suportados.** |
+| [ArchiveBox/ArchiveBox](https://github.com/ArchiveBox/ArchiveBox) | Organiza um arquivo próprio de URLs e salva conteúdo em múltiplos formatos. | **Útil para coleções de pesquisa e preservação recorrente.** |
+| [arquivo/pwa-technologies](https://github.com/arquivo/pwa-technologies) | Documenta tecnologias e APIs do Arquivo.pt, incluindo pesquisa de arquivos web. | **Fonte complementar para comparar cobertura com a Wayback.** |
 <!-- tools:end -->
 
 ### Complementares (fontes independentes e alternativas)
@@ -65,7 +85,6 @@ Para OSINT, a combinação de partida é **CDX API + waymore + uma biblioteca Py
 | [jsvine/waybackpack](https://github.com/jsvine/waybackpack) | Baixa o histórico de capturas de uma página da Wayback Machine. | **Alternativa leve para guardar todas as versões de uma única URL.** |
 | [cocrawler/cdx_toolkit](https://github.com/cocrawler/cdx_toolkit) | Biblioteca/CLI para consultar índices CDX (Internet Archive e Common Crawl). | **Útil para cruzar a Wayback com o Common Crawl na mesma interface.** |
 | [oduwsdl/MemGator](https://github.com/oduwsdl/MemGator) | Agregador Memento: consulta vários arquivos web ao mesmo tempo. | **Boa para obter uma segunda fonte de arquivamento independente da Wayback.** |
-| [ArchiveBox/ArchiveBox](https://github.com/ArchiveBox/ArchiveBox) | Arquivamento web auto-hospedado, sob seu controle. | **Alternativa ao Save Page Now quando a página não deve ser pública.** |
 | [Common Crawl — índice de URLs](https://index.commoncrawl.org/) | Índice de URLs rastreadas pelo Common Crawl, fonte independente da Wayback. | **Corrobora existência de URLs sem depender do Internet Archive.** |
 <!-- extra:end -->
 
@@ -93,6 +112,13 @@ Entender o que está por baixo ......... CDX Server (referência)
 | 4 | [CDX Server API — documentação oficial](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) | Enumeração, datas, filtros, campos, deduplicação e paginação. |
 | 5 | [Waybackpy — documentação](https://akamhy.github.io/waybackpy/) | Uso das APIs por Python e terminal. |
 | 6 | [Wayback (EDGI) — documentação](https://wayback.readthedocs.io/en/stable/) | Pesquisa e recuperação de capturas em scripts. |
+| 7 | [pywb — documentação](https://pywb.readthedocs.io/en/latest/) | Coleções locais, reprodução e gravação de arquivos web. |
+| 8 | [warcio — guia do mantenedor](https://github.com/webrecorder/warcio) | Registros WARC/ARC, cabeçalhos e leitura em streaming. |
+| 9 | [Browsertrix Crawler — guia do projeto](https://github.com/webrecorder/browsertrix-crawler) | Captura automatizada com navegador e Docker. |
+| 10 | [ArchiveWeb.page — guia do projeto](https://github.com/webrecorder/archiveweb.page) | Preservação manual de navegação. |
+| 11 | [ReplayWeb.page — documentação](https://replayweb.page/docs/) | Abrir e revisar arquivos web no navegador. |
+| 12 | [Arquivo.pt — APIs](https://github.com/arquivo/pwa-technologies/wiki/APIs) | Pesquisa complementar em outro acervo. |
+| 13 | [ArchiveBox — documentação](https://docs.archivebox.io/latest/) | Organização e configuração de um arquivo próprio. |
 <!-- guides:end -->
 
 Material do Internet Archive ou dos próprios mantenedores. Versão comentada em [docs/03-trilha-de-estudo.md](docs/03-trilha-de-estudo.md).
@@ -165,8 +191,9 @@ Gera `out/example.com/` com `cdx.csv` (+ `.meta.json`), `timeline.md`, `inventor
 ├── README.md                 ← você está aqui
 ├── assets/                   ← identidade visual (logos, banners, tokens)
 ├── data/tools.json           ← fonte única do mapeamento de ferramentas
-├── docs/                     ← 12 guias: fundamentos → CDX → trilha → exercícios → evidência →
-│                               psicologia → ética → playbooks TI → pivôs/IOC → adversário → shell → FAQ
+├── docs/                     ← 15 guias: fundamentos → CDX → trilha → exercícios → evidência → psicologia →
+│                               ética → ecossistema → laboratórios → diagnóstico → playbooks TI →
+│                               pivôs/IOC → adversário → shell → FAQ
 ├── scripts/                  ← wb_cdx · timeline · inventory · fetch · extract · diff · build_catalog
 │   └── sh/                   ← wb-pipeline · wb-cdx · wb-verify
 ├── templates/                ← ficha de evidência e relatório de cronologia

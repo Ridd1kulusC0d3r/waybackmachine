@@ -40,7 +40,7 @@ scripts/sh/wb-pipeline.sh "$ALVO" --match domain --fetch 30
 
 **Pergunta:** que outros domínios compartilham o mesmo operador ou template?
 
-`wb_extract.py` devolve IDs de analytics (`UA-`, `G-`, `GTM-`), AdSense (`pub-`), e-mails, handles do Telegram e `.onion`. Cada um é um **pivô** para outras fontes (buscadores de código-fonte, serviços de varredura de URL, registros passivos de DNS). Tabela de pivôs e força em [09](09-pivos-e-ioc.md).
+`wb_extract.py` devolve IDs de analytics (`UA-`, `G-`, `GTM-`), AdSense (`pub-`), e-mails, handles do Telegram e `.onion`. Cada um é um **pivô** para outras fontes (buscadores de código-fonte, serviços de varredura de URL, registros passivos de DNS). Tabela de pivôs e força em [12](12-pivos-e-ioc.md).
 
 **Prova:** que dois sites exibiram o mesmo identificador. **Não prova:** mesmo operador. Templates vendidos, temas clonados e IDs copiados criam **falsas ligações**. Exija ≥ 2 pivôs independentes e consistência temporal.
 
