@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "note": "Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi executada na curadoria inicial: status 'documentado' significa lido, não testado.",
+  "note": "Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi executada na curadoria. Status: 'documentado' = documentação lida na curadoria inicial; 'a-verificar' = entrada complementar sugerida a partir de conhecimento geral, ainda sem checagem da documentação atual.",
   "roles": {
     "discover": "Descobrir URLs",
     "recover": "Recuperar conteúdo",
@@ -15,11 +15,15 @@
       "url": "https://github.com/xnl-h4ck3r/waymore",
       "kind": "cli",
       "lang": "Python",
-      "roles": ["discover", "recover"],
+      "roles": [
+        "discover",
+        "recover"
+      ],
       "purpose": "Descobre URLs em diferentes fontes e baixa respostas arquivadas da Wayback Machine.",
       "verdict": "Primeira escolha para investigação exploratória: permite pesquisar o conteúdo recuperado, além de listar endereços.",
       "caveat": "Combina várias fontes; registre a origem de cada resultado.",
-      "status": "documentado"
+      "status": "documentado",
+      "tier": "core"
     },
     {
       "id": "waybackurls",
@@ -27,11 +31,14 @@
       "url": "https://github.com/tomnomnom/waybackurls",
       "kind": "cli",
       "lang": "Go",
-      "roles": ["discover"],
+      "roles": [
+        "discover"
+      ],
       "purpose": "Recebe domínios e retorna URLs conhecidas pela Wayback, incluindo subdomínios.",
       "verdict": "Melhor opção simples para pipelines: pequena e direta.",
       "caveat": "A listagem, sozinha, não é análise de conteúdo.",
-      "status": "documentado"
+      "status": "documentado",
+      "tier": "core"
     },
     {
       "id": "gau",
@@ -39,11 +46,14 @@
       "url": "https://github.com/lc/gau",
       "kind": "cli",
       "lang": "Go",
-      "roles": ["discover"],
+      "roles": [
+        "discover"
+      ],
       "purpose": "Coleta URLs de Wayback, Common Crawl, OTX e URLScan; oferece filtros e saída JSON.",
       "verdict": "Boa para ampliar cobertura.",
       "caveat": "Registre a origem dos resultados para não atribuir tudo à Wayback (use --providers wayback para isolar).",
-      "status": "documentado"
+      "status": "documentado",
+      "tier": "core"
     },
     {
       "id": "waybackpy",
@@ -51,12 +61,17 @@
       "url": "https://github.com/akamhy/waybackpy",
       "kind": "lib+cli",
       "lang": "Python",
-      "roles": ["discover", "recover", "preserve"],
+      "roles": [
+        "discover",
+        "recover",
+        "preserve"
+      ],
       "purpose": "Biblioteca Python e CLI para Availability, CDX e Save Page Now.",
       "verdict": "Boa porta de entrada para automação, com exemplos acessíveis.",
       "caveat": "Save Page Now publica a página no arquivo: avalie o impacto operacional antes de usar.",
       "docs": "https://akamhy.github.io/waybackpy/",
-      "status": "documentado"
+      "status": "documentado",
+      "tier": "core"
     },
     {
       "id": "wayback-edgi",
@@ -64,12 +79,17 @@
       "url": "https://github.com/edgi-govdata-archiving/wayback",
       "kind": "lib",
       "lang": "Python",
-      "roles": ["discover", "recover", "analyze"],
+      "roles": [
+        "discover",
+        "recover",
+        "analyze"
+      ],
       "purpose": "Cliente Python para pesquisar e recuperar capturas históricas, chamadas mementos.",
       "verdict": "Candidata para pipelines de pesquisa temporal; documentação dedicada à busca e recuperação.",
       "caveat": "Cliente de pesquisa/recuperação; a análise temporal fica por sua conta.",
       "docs": "https://wayback.readthedocs.io/en/stable/",
-      "status": "documentado"
+      "status": "documentado",
+      "tier": "core"
     },
     {
       "id": "wayback-machine-downloader",
@@ -77,11 +97,14 @@
       "url": "https://github.com/hartator/wayback-machine-downloader",
       "kind": "cli",
       "lang": "Ruby",
-      "roles": ["recover"],
+      "roles": [
+        "recover"
+      ],
       "purpose": "Recupera arquivos arquivados, com filtros por período, URL e extensão.",
       "verdict": "Útil para reconstrução local.",
       "caveat": "Por padrão reúne a última versão de cada arquivo, podendo misturar datas: delimite o período.",
-      "status": "documentado"
+      "status": "documentado",
+      "tier": "core"
     },
     {
       "id": "wayback-webextension",
@@ -89,11 +112,15 @@
       "url": "https://github.com/internetarchive/wayback-machine-webextension",
       "kind": "extension",
       "lang": "JavaScript",
-      "roles": ["preserve", "recover"],
+      "roles": [
+        "preserve",
+        "recover"
+      ],
       "purpose": "Extensão oficial para salvar páginas e acessar capturas antigas e recentes.",
       "verdict": "Melhor começo sem programação, especialmente durante pesquisa manual.",
       "caveat": "Salvar uma página a torna pública no arquivo.",
-      "status": "documentado"
+      "status": "documentado",
+      "tier": "core"
     },
     {
       "id": "cdx-server",
@@ -101,12 +128,93 @@
       "url": "https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server",
       "kind": "api",
       "lang": "Java",
-      "roles": ["reference", "discover"],
+      "roles": [
+        "reference",
+        "discover"
+      ],
       "purpose": "Código e documentação do serviço de consulta ao índice de capturas.",
       "verdict": "Referência técnica essencial: ajuda a entender os dados que as outras ferramentas consultam.",
       "caveat": "Fonte primária; confira a documentação antes de confiar em resumos.",
       "docs": "https://github.com/internetarchive/wayback/blob/master/wayback-cdx-server/README.md",
-      "status": "documentado"
+      "status": "documentado",
+      "tier": "core"
+    },
+    {
+      "id": "waybackpack",
+      "name": "jsvine/waybackpack",
+      "url": "https://github.com/jsvine/waybackpack",
+      "kind": "cli",
+      "lang": "Python",
+      "roles": [
+        "recover"
+      ],
+      "purpose": "Baixa o histórico de capturas de uma página da Wayback Machine.",
+      "verdict": "Alternativa leve para guardar todas as versões de uma única URL.",
+      "caveat": "Confirme parâmetros e limites na documentação atual antes de usar.",
+      "status": "a-verificar",
+      "tier": "complementar"
+    },
+    {
+      "id": "cdx-toolkit",
+      "name": "cocrawler/cdx_toolkit",
+      "url": "https://github.com/cocrawler/cdx_toolkit",
+      "kind": "lib+cli",
+      "lang": "Python",
+      "roles": [
+        "discover",
+        "analyze"
+      ],
+      "purpose": "Biblioteca/CLI para consultar índices CDX (Internet Archive e Common Crawl).",
+      "verdict": "Útil para cruzar a Wayback com o Common Crawl na mesma interface.",
+      "caveat": "Confirme o escopo atual do projeto na documentação.",
+      "status": "a-verificar",
+      "tier": "complementar"
+    },
+    {
+      "id": "memgator",
+      "name": "oduwsdl/MemGator",
+      "url": "https://github.com/oduwsdl/MemGator",
+      "kind": "cli+server",
+      "lang": "Go",
+      "roles": [
+        "discover"
+      ],
+      "purpose": "Agregador Memento: consulta vários arquivos web ao mesmo tempo.",
+      "verdict": "Boa para obter uma segunda fonte de arquivamento independente da Wayback.",
+      "caveat": "Confirme a lista de arquivos suportados na documentação.",
+      "status": "a-verificar",
+      "tier": "complementar"
+    },
+    {
+      "id": "archivebox",
+      "name": "ArchiveBox/ArchiveBox",
+      "url": "https://github.com/ArchiveBox/ArchiveBox",
+      "kind": "self-hosted",
+      "lang": "Python",
+      "roles": [
+        "preserve"
+      ],
+      "purpose": "Arquivamento web auto-hospedado, sob seu controle.",
+      "verdict": "Alternativa ao Save Page Now quando a página não deve ser pública.",
+      "caveat": "Exige operar e proteger sua própria instância.",
+      "status": "a-verificar",
+      "tier": "complementar"
+    },
+    {
+      "id": "commoncrawl-index",
+      "name": "Common Crawl — índice de URLs",
+      "url": "https://index.commoncrawl.org/",
+      "kind": "api",
+      "lang": "—",
+      "roles": [
+        "discover",
+        "reference"
+      ],
+      "purpose": "Índice de URLs rastreadas pelo Common Crawl, fonte independente da Wayback.",
+      "verdict": "Corrobora existência de URLs sem depender do Internet Archive.",
+      "caveat": "Cobertura e granularidade diferem da Wayback; não são equivalentes.",
+      "status": "a-verificar",
+      "tier": "complementar"
     }
   ],
   "guides": [

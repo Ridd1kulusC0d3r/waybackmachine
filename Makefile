@@ -1,4 +1,4 @@
-.PHONY: test catalog check social
+.PHONY: test catalog check lint social
 
 test:
 	python3 -m unittest discover -s tests -v
@@ -8,6 +8,9 @@ catalog:
 
 check:
 	python3 scripts/build_catalog.py --check
+
+lint:
+	shellcheck -S style scripts/sh/*.sh
 
 # Requer Chromium (CHROME) e ImageMagick (convert). O headless corta a altura útil da
 # janela, então renderiza maior e recorta para 1280x640.

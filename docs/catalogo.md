@@ -2,7 +2,7 @@
 
 > Gerado por `scripts/build_catalog.py` a partir de `data/tools.json`. Não edite à mão.
 
-_Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi executada na curadoria inicial: status 'documentado' significa lido, não testado._
+_Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi executada na curadoria. Status: 'documentado' = documentação lida na curadoria inicial; 'a-verificar' = entrada complementar sugerida a partir de conhecimento geral, ainda sem checagem da documentação atual._
 
 ## Por papel na investigação
 
@@ -14,6 +14,9 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 - [akamhy/waybackpy](https://github.com/akamhy/waybackpy) — Biblioteca Python e CLI para Availability, CDX e Save Page Now.
 - [edgi-govdata-archiving/wayback](https://github.com/edgi-govdata-archiving/wayback) — Cliente Python para pesquisar e recuperar capturas históricas, chamadas mementos.
 - [internetarchive/wayback — CDX Server](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) — Código e documentação do serviço de consulta ao índice de capturas.
+- [cocrawler/cdx_toolkit](https://github.com/cocrawler/cdx_toolkit) — Biblioteca/CLI para consultar índices CDX (Internet Archive e Common Crawl).
+- [oduwsdl/MemGator](https://github.com/oduwsdl/MemGator) — Agregador Memento: consulta vários arquivos web ao mesmo tempo.
+- [Common Crawl — índice de URLs](https://index.commoncrawl.org/) — Índice de URLs rastreadas pelo Common Crawl, fonte independente da Wayback.
 
 ### Recuperar conteúdo
 
@@ -22,25 +25,29 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 - [edgi-govdata-archiving/wayback](https://github.com/edgi-govdata-archiving/wayback) — Cliente Python para pesquisar e recuperar capturas históricas, chamadas mementos.
 - [hartator/wayback-machine-downloader](https://github.com/hartator/wayback-machine-downloader) — Recupera arquivos arquivados, com filtros por período, URL e extensão.
 - [internetarchive/wayback-machine-webextension](https://github.com/internetarchive/wayback-machine-webextension) — Extensão oficial para salvar páginas e acessar capturas antigas e recentes.
+- [jsvine/waybackpack](https://github.com/jsvine/waybackpack) — Baixa o histórico de capturas de uma página da Wayback Machine.
 
 ### Analisar no tempo
 
 - [edgi-govdata-archiving/wayback](https://github.com/edgi-govdata-archiving/wayback) — Cliente Python para pesquisar e recuperar capturas históricas, chamadas mementos.
+- [cocrawler/cdx_toolkit](https://github.com/cocrawler/cdx_toolkit) — Biblioteca/CLI para consultar índices CDX (Internet Archive e Common Crawl).
 
 ### Preservar páginas
 
 - [akamhy/waybackpy](https://github.com/akamhy/waybackpy) — Biblioteca Python e CLI para Availability, CDX e Save Page Now.
 - [internetarchive/wayback-machine-webextension](https://github.com/internetarchive/wayback-machine-webextension) — Extensão oficial para salvar páginas e acessar capturas antigas e recentes.
+- [ArchiveBox/ArchiveBox](https://github.com/ArchiveBox/ArchiveBox) — Arquivamento web auto-hospedado, sob seu controle.
 
 ### Referência técnica
 
 - [internetarchive/wayback — CDX Server](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) — Código e documentação do serviço de consulta ao índice de capturas.
+- [Common Crawl — índice de URLs](https://index.commoncrawl.org/) — Índice de URLs rastreadas pelo Common Crawl, fonte independente da Wayback.
 
 ## Fichas
 
 ### xnl-h4ck3r/waymore
 
-- **Tipo:** cli · **Linguagem:** Python · **Status:** documentado
+- **Tipo:** cli · **Linguagem:** Python · **Nível:** core · **Status:** documentado
 - **Link:** <https://github.com/xnl-h4ck3r/waymore>
 - **Serve para:** Descobre URLs em diferentes fontes e baixa respostas arquivadas da Wayback Machine.
 - **Avaliação:** Primeira escolha para investigação exploratória: permite pesquisar o conteúdo recuperado, além de listar endereços.
@@ -48,7 +55,7 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 
 ### tomnomnom/waybackurls
 
-- **Tipo:** cli · **Linguagem:** Go · **Status:** documentado
+- **Tipo:** cli · **Linguagem:** Go · **Nível:** core · **Status:** documentado
 - **Link:** <https://github.com/tomnomnom/waybackurls>
 - **Serve para:** Recebe domínios e retorna URLs conhecidas pela Wayback, incluindo subdomínios.
 - **Avaliação:** Melhor opção simples para pipelines: pequena e direta.
@@ -56,7 +63,7 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 
 ### lc/gau
 
-- **Tipo:** cli · **Linguagem:** Go · **Status:** documentado
+- **Tipo:** cli · **Linguagem:** Go · **Nível:** core · **Status:** documentado
 - **Link:** <https://github.com/lc/gau>
 - **Serve para:** Coleta URLs de Wayback, Common Crawl, OTX e URLScan; oferece filtros e saída JSON.
 - **Avaliação:** Boa para ampliar cobertura.
@@ -64,7 +71,7 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 
 ### akamhy/waybackpy
 
-- **Tipo:** lib+cli · **Linguagem:** Python · **Status:** documentado
+- **Tipo:** lib+cli · **Linguagem:** Python · **Nível:** core · **Status:** documentado
 - **Link:** <https://github.com/akamhy/waybackpy>
 - **Serve para:** Biblioteca Python e CLI para Availability, CDX e Save Page Now.
 - **Avaliação:** Boa porta de entrada para automação, com exemplos acessíveis.
@@ -73,7 +80,7 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 
 ### edgi-govdata-archiving/wayback
 
-- **Tipo:** lib · **Linguagem:** Python · **Status:** documentado
+- **Tipo:** lib · **Linguagem:** Python · **Nível:** core · **Status:** documentado
 - **Link:** <https://github.com/edgi-govdata-archiving/wayback>
 - **Serve para:** Cliente Python para pesquisar e recuperar capturas históricas, chamadas mementos.
 - **Avaliação:** Candidata para pipelines de pesquisa temporal; documentação dedicada à busca e recuperação.
@@ -82,7 +89,7 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 
 ### hartator/wayback-machine-downloader
 
-- **Tipo:** cli · **Linguagem:** Ruby · **Status:** documentado
+- **Tipo:** cli · **Linguagem:** Ruby · **Nível:** core · **Status:** documentado
 - **Link:** <https://github.com/hartator/wayback-machine-downloader>
 - **Serve para:** Recupera arquivos arquivados, com filtros por período, URL e extensão.
 - **Avaliação:** Útil para reconstrução local.
@@ -90,7 +97,7 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 
 ### internetarchive/wayback-machine-webextension
 
-- **Tipo:** extension · **Linguagem:** JavaScript · **Status:** documentado
+- **Tipo:** extension · **Linguagem:** JavaScript · **Nível:** core · **Status:** documentado
 - **Link:** <https://github.com/internetarchive/wayback-machine-webextension>
 - **Serve para:** Extensão oficial para salvar páginas e acessar capturas antigas e recentes.
 - **Avaliação:** Melhor começo sem programação, especialmente durante pesquisa manual.
@@ -98,9 +105,49 @@ _Descrições baseadas na documentação dos projetos. Nenhuma ferramenta foi ex
 
 ### internetarchive/wayback — CDX Server
 
-- **Tipo:** api · **Linguagem:** Java · **Status:** documentado
+- **Tipo:** api · **Linguagem:** Java · **Nível:** core · **Status:** documentado
 - **Link:** <https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server>
 - **Serve para:** Código e documentação do serviço de consulta ao índice de capturas.
 - **Avaliação:** Referência técnica essencial: ajuda a entender os dados que as outras ferramentas consultam.
 - **Cuidado:** Fonte primária; confira a documentação antes de confiar em resumos.
 - **Documentação:** <https://github.com/internetarchive/wayback/blob/master/wayback-cdx-server/README.md>
+
+### jsvine/waybackpack
+
+- **Tipo:** cli · **Linguagem:** Python · **Nível:** complementar · **Status:** a-verificar
+- **Link:** <https://github.com/jsvine/waybackpack>
+- **Serve para:** Baixa o histórico de capturas de uma página da Wayback Machine.
+- **Avaliação:** Alternativa leve para guardar todas as versões de uma única URL.
+- **Cuidado:** Confirme parâmetros e limites na documentação atual antes de usar.
+
+### cocrawler/cdx_toolkit
+
+- **Tipo:** lib+cli · **Linguagem:** Python · **Nível:** complementar · **Status:** a-verificar
+- **Link:** <https://github.com/cocrawler/cdx_toolkit>
+- **Serve para:** Biblioteca/CLI para consultar índices CDX (Internet Archive e Common Crawl).
+- **Avaliação:** Útil para cruzar a Wayback com o Common Crawl na mesma interface.
+- **Cuidado:** Confirme o escopo atual do projeto na documentação.
+
+### oduwsdl/MemGator
+
+- **Tipo:** cli+server · **Linguagem:** Go · **Nível:** complementar · **Status:** a-verificar
+- **Link:** <https://github.com/oduwsdl/MemGator>
+- **Serve para:** Agregador Memento: consulta vários arquivos web ao mesmo tempo.
+- **Avaliação:** Boa para obter uma segunda fonte de arquivamento independente da Wayback.
+- **Cuidado:** Confirme a lista de arquivos suportados na documentação.
+
+### ArchiveBox/ArchiveBox
+
+- **Tipo:** self-hosted · **Linguagem:** Python · **Nível:** complementar · **Status:** a-verificar
+- **Link:** <https://github.com/ArchiveBox/ArchiveBox>
+- **Serve para:** Arquivamento web auto-hospedado, sob seu controle.
+- **Avaliação:** Alternativa ao Save Page Now quando a página não deve ser pública.
+- **Cuidado:** Exige operar e proteger sua própria instância.
+
+### Common Crawl — índice de URLs
+
+- **Tipo:** api · **Linguagem:** — · **Nível:** complementar · **Status:** a-verificar
+- **Link:** <https://index.commoncrawl.org/>
+- **Serve para:** Índice de URLs rastreadas pelo Common Crawl, fonte independente da Wayback.
+- **Avaliação:** Corrobora existência de URLs sem depender do Internet Archive.
+- **Cuidado:** Cobertura e granularidade diferem da Wayback; não são equivalentes.

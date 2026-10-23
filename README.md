@@ -34,6 +34,11 @@ Para OSINT, a combinação de partida é **CDX API + waymore + uma biblioteca Py
 | Documentar achados com rigor | [docs/05-cadeia-de-evidencia.md](docs/05-cadeia-de-evidencia.md) |
 | Evitar vieses que sabotam a investigação | [docs/06-psicologia-investigativa.md](docs/06-psicologia-investigativa.md) |
 | Limites éticos e de OPSEC | [docs/07-etica-e-opsec.md](docs/07-etica-e-opsec.md) |
+| Playbooks de inteligência de ameaças (6 cenários) | [docs/08-playbooks-ti.md](docs/08-playbooks-ti.md) |
+| Pivôs e IOCs: força, regras e esquema de compartilhamento | [docs/09-pivos-e-ioc.md](docs/09-pivos-e-ioc.md) |
+| Adversário que engana o arquivo · desgaste do analista | [docs/10-psicologia-do-adversario-e-do-analista.md](docs/10-psicologia-do-adversario-e-do-analista.md) |
+| Receitas de Shell (`awk`, `sort`, `comm`, `jq`) para a CDX | [docs/11-shell-cookbook.md](docs/11-shell-cookbook.md) |
+| Glossário e perguntas frequentes | [docs/12-glossario-e-faq.md](docs/12-glossario-e-faq.md) |
 
 ## Mapa de repositórios
 
@@ -49,6 +54,20 @@ Para OSINT, a combinação de partida é **CDX API + waymore + uma biblioteca Py
 | [internetarchive/wayback-machine-webextension](https://github.com/internetarchive/wayback-machine-webextension) | Extensão oficial para salvar páginas e acessar capturas antigas e recentes. | **Melhor começo sem programação, especialmente durante pesquisa manual.** |
 | [internetarchive/wayback — CDX Server](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) | Código e documentação do serviço de consulta ao índice de capturas. | **Referência técnica essencial: ajuda a entender os dados que as outras ferramentas consultam.** |
 <!-- tools:end -->
+
+### Complementares (fontes independentes e alternativas)
+
+Úteis para **corroborar** com outra fonte ou preservar sem publicar. Status `a-verificar`: sugeridas sem checagem da documentação atual.
+
+<!-- extra:begin -->
+| Repositório | Para que serve | Avaliação |
+|---|---|---|
+| [jsvine/waybackpack](https://github.com/jsvine/waybackpack) | Baixa o histórico de capturas de uma página da Wayback Machine. | **Alternativa leve para guardar todas as versões de uma única URL.** |
+| [cocrawler/cdx_toolkit](https://github.com/cocrawler/cdx_toolkit) | Biblioteca/CLI para consultar índices CDX (Internet Archive e Common Crawl). | **Útil para cruzar a Wayback com o Common Crawl na mesma interface.** |
+| [oduwsdl/MemGator](https://github.com/oduwsdl/MemGator) | Agregador Memento: consulta vários arquivos web ao mesmo tempo. | **Boa para obter uma segunda fonte de arquivamento independente da Wayback.** |
+| [ArchiveBox/ArchiveBox](https://github.com/ArchiveBox/ArchiveBox) | Arquivamento web auto-hospedado, sob seu controle. | **Alternativa ao Save Page Now quando a página não deve ser pública.** |
+| [Common Crawl — índice de URLs](https://index.commoncrawl.org/) | Índice de URLs rastreadas pelo Common Crawl, fonte independente da Wayback. | **Corrobora existência de URLs sem depender do Internet Archive.** |
+<!-- extra:end -->
 
 Fichas completas e filtro por papel (descobrir, recuperar, analisar, preservar): [docs/catalogo.md](docs/catalogo.md). Dados-fonte: [`data/tools.json`](data/tools.json) — para adicionar uma ferramenta, edite o JSON e rode `make catalog`.
 
@@ -107,24 +126,29 @@ gau --providers wayback --subs --o urls-wayback.txt example.com
 
 ## Scripts incluídos
 
-Somente biblioteca padrão do Python (3.9+), sem dependências.
+Python 3.9+ só com biblioteca padrão; Shell em Bash. Sem dependências.
+
+### Pipeline em um comando
 
 ```bash
-# 1. índice de capturas -> CSV + proveniência (.meta.json com query, hora UTC e SHA-256)
-python scripts/wb_cdx.py example.com/pagina --out out/pagina.csv
-
-# 2. cronologia em Markdown com pontos de mudança (digest / status HTTP)
-python scripts/wb_timeline.py out/pagina.csv > out/pagina-timeline.md
-
-# 3. comparar duas capturas (conteúdo bruto, modificador id_)
-python scripts/wb_diff.py https://example.com/pagina 20200101000000 20220101000000
+scripts/sh/wb-pipeline.sh example.com --match domain --fetch 20
 ```
+
+Gera `out/example.com/` com `cdx.csv` (+ `.meta.json`), `timeline.md`, `inventory.md`, e, com `--fetch N`, `raw/`, `manifest.jsonl`, `SHA256SUMS` e `iocs.json` (defanged). Tudo registrado em `RUN.log`. Depois, `scripts/sh/wb-verify.sh out/example.com` confere a integridade.
+
+### Peças avulsas
 
 | Script | Faz | Cuidado embutido |
 |---|---|---|
-| [`wb_cdx.py`](scripts/wb_cdx.py) | Consulta a CDX com paginação por `resumeKey`, retry com backoff | Grava a URL exata consultada e o SHA-256 do resultado |
-| [`wb_timeline.py`](scripts/wb_timeline.py) | Resume capturas por ano, status e mudanças | Lembra que a 1ª captura não é a data de publicação |
-| [`wb_diff.py`](scripts/wb_diff.py) | Diff entre duas capturas | Usa `id_` (sem banner nem links reescritos) e registra hashes |
+| [`wb_cdx.py`](scripts/wb_cdx.py) | Consulta a CDX com paginação por `resumeKey` e retry | Grava a URL exata e o SHA-256 do resultado |
+| [`wb_timeline.py`](scripts/wb_timeline.py) | Cronologia em Markdown com pontos de mudança | Lembra: 1ª captura ≠ data de publicação |
+| [`wb_inventory.py`](scripts/wb_inventory.py) | Triagem de URLs por host, tipo e caminhos sensíveis | "Sinalizado ≠ exposto" |
+| [`wb_fetch.py`](scripts/wb_fetch.py) | Baixa brutos (`id_`), retomável, com manifesto e `SHA256SUMS` | Registra a URL **final** (a Wayback pode servir a captura mais próxima) |
+| [`wb_extract.py`](scripts/wb_extract.py) | Pivôs candidatos: analytics IDs, e-mails, domínios, IPs, `.onion`, Telegram, carteiras | Candidatos, não achados; `--defang`; cada item com hash do arquivo |
+| [`wb_diff.py`](scripts/wb_diff.py) | Diff entre duas capturas brutas | Registra hashes dos dois lados |
+| [`sh/wb-cdx.sh`](scripts/sh/wb-cdx.sh) | CDX em TSV só com `curl` | User-Agent identificável e retry |
+| [`sh/wb-verify.sh`](scripts/sh/wb-verify.sh) | Verifica `SHA256SUMS` | Falha com código 1 se algo mudou |
+| [`build_catalog.py`](scripts/build_catalog.py) | Gera tabelas do README e `docs/catalogo.md` | `--check` no CI |
 
 ## O cuidado analítico mais importante
 
@@ -141,8 +165,10 @@ python scripts/wb_diff.py https://example.com/pagina 20200101000000 202201010000
 ├── README.md                 ← você está aqui
 ├── assets/                   ← identidade visual (logos, banners, tokens)
 ├── data/tools.json           ← fonte única do mapeamento de ferramentas
-├── docs/                     ← guia: fundamentos → CDX → trilha → exercícios → evidência → psicologia → ética
-├── scripts/                  ← wb_cdx · wb_timeline · wb_diff · build_catalog
+├── docs/                     ← 12 guias: fundamentos → CDX → trilha → exercícios → evidência →
+│                               psicologia → ética → playbooks TI → pivôs/IOC → adversário → shell → FAQ
+├── scripts/                  ← wb_cdx · timeline · inventory · fetch · extract · diff · build_catalog
+│   └── sh/                   ← wb-pipeline · wb-cdx · wb-verify
 ├── templates/                ← ficha de evidência e relatório de cronologia
 ├── tests/                    ← testes (servidor Wayback simulado)
 └── .github/                  ← CI, templates de issue e PR

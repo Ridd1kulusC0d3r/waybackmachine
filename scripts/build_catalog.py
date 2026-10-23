@@ -19,11 +19,12 @@ README = ROOT / "README.md"
 CATALOG = ROOT / "docs" / "catalogo.md"
 BEGIN, END = "<!-- tools:begin -->", "<!-- tools:end -->"
 GUIDE_BEGIN, GUIDE_END = "<!-- guides:begin -->", "<!-- guides:end -->"
+EXTRA_BEGIN, EXTRA_END = "<!-- extra:begin -->", "<!-- extra:end -->"
 
 
-def tools_table(data: dict) -> str:
+def tools_table(data: dict, tier: str = "core") -> str:
     rows = ["| Repositório | Para que serve | Avaliação |", "|---|---|---|"]
-    for t in data["tools"]:
+    for t in (t for t in data["tools"] if t.get("tier", "core") == tier):
         rows.append(f"| [{t['name']}]({t['url']}) | {t['purpose']} | **{t['verdict']}** |")
     return "\n".join(rows)
 
@@ -58,7 +59,7 @@ def catalog_md(data: dict) -> str:
         out += [
             f"### {t['name']}",
             "",
-            f"- **Tipo:** {t['kind']} · **Linguagem:** {t['lang']} · **Status:** {t['status']}",
+            f"- **Tipo:** {t['kind']} · **Linguagem:** {t['lang']} · **Nível:** {t.get('tier', 'core')} · **Status:** {t['status']}",
             f"- **Link:** <{t['url']}>",
             f"- **Serve para:** {t['purpose']}",
             f"- **Avaliação:** {t['verdict']}",
@@ -83,7 +84,8 @@ def main(argv: list[str] | None = None) -> int:
     args = p.parse_args(argv)
 
     data = json.loads(DATA.read_text(encoding="utf-8"))
-    readme = splice(README.read_text(encoding="utf-8"), BEGIN, END, tools_table(data))
+    readme = splice(README.read_text(encoding="utf-8"), BEGIN, END, tools_table(data, "core"))
+    readme = splice(readme, EXTRA_BEGIN, EXTRA_END, tools_table(data, "complementar"))
     readme = splice(readme, GUIDE_BEGIN, GUIDE_END, guides_table(data))
     catalog = catalog_md(data)
 
