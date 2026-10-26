@@ -1,58 +1,64 @@
-# Identidade visual · wayback/atlas
+# Identidade visual · WaybackAtlas
+
+Mesma família visual do [LLmInjection](https://github.com/Ridd1kulusC0d3r/LLmInjection): a **mesa de analista**. Papel, tinta e **uma só cor de sinal**. Os dois projetos devem parecer da mesma bancada: o LLmInjection mostra *o que foi injetado*; o WaybackAtlas mostra *o que foi arquivado*.
 
 ## Conceito
 
-**Atlas** = mapa; **wayback** = voltar no tempo. A marca combina um *anel de relógio aberto* (o tempo, com a interrupção onde fica o ponto de evidência) e **duas setas de retroceder** (⏪). O anel interno pontilhado em ciano remete aos *ticks* de uma linha do tempo; o ponto âmbar é a captura que importa.
+O motivo do LLmInjection é uma **página de documento com tarjas de redação**, uma delas em cor de sinal ("conteúdo injetado, trate como dado"). Aqui o motivo vira uma **pilha de capturas**: várias versões da mesma página, uma sobre a outra. Na página da frente, a tarja de sinal marca a **observação arquivada**, com a legenda que resume o método do projeto:
 
-Tom de voz: **técnico, sóbrio, preciso**. Frases curtas; afirmações calibradas; nunca sensacionalista.
+> **OBSERVAÇÃO ARQUIVADA. NÃO É DATA DE PUBLICAÇÃO.**
 
-## Logos
+Tom de voz: **técnico, sóbrio, calibrado**. "Evidência acima de hype." Frases curtas, afirmações com grau de confiança, nunca sensacionalista.
+
+## Arquivos
 
 | Arquivo | Uso |
 |---|---|
-| [`assets/logo-dark.svg`](../assets/logo-dark.svg) | Fundos escuros, avatar da organização |
-| [`assets/logo-light.svg`](../assets/logo-light.svg) | Fundos claros |
-| [`assets/banner-dark.svg`](../assets/banner-dark.svg) / [`banner-light.svg`](../assets/banner-light.svg) | Topo do README (alternam por tema via `<picture>`) |
-| `assets/social-preview.png` | Imagem de compartilhamento 1280×640 (ver abaixo) |
+| [`assets/banner-light.svg`](../assets/banner-light.svg) / [`banner-dark.svg`](../assets/banner-dark.svg) | Topo do README (alterna por tema via `<picture>`) |
+| [`assets/logo-light.svg`](../assets/logo-light.svg) / [`logo-dark.svg`](../assets/logo-dark.svg) | Avatar, favicon, ícone |
+| [`assets/social-preview.png`](../assets/social-preview.png) | Imagem de compartilhamento 1280×640 |
+| [`assets/tokens.css`](../assets/tokens.css) | **Fonte única** da paleta e tipografia |
 
-Área de respiro mínima: metade do diâmetro do anel. Tamanho mínimo: 24 px.
+Os SVGs usam as cores de `tokens.css` embutidas (SVG em `<img>` não lê variáveis CSS). Ao mudar um token, atualize os SVGs com o mesmo valor.
 
 ## Paleta
 
-| Token | Hex | Papel |
-|---|---|---|
-| `--wa-ink` | `#0B1020` | Fundo escuro / texto em fundo claro |
-| `--wa-deep` | `#121A33` | Superfícies elevadas |
-| `--wa-paper` | `#F4EFE6` | Fundo claro / texto em fundo escuro |
-| `--wa-amber` | `#F5A524` | Acento primário: **o ponto de evidência** (`#C77D00` em fundo claro) |
-| `--wa-cyan` | `#3DDBD9` | Acento secundário: linha do tempo, dados (`#0E8F8D` em fundo claro) |
-| `--wa-mute` | `#8A93B2` | Texto secundário (`#4A5273` em fundo claro) |
-| `--wa-flag` | `#FF5C5C` | Alertas: viés, risco, dado não verificado |
+| Token | Claro | Escuro | Papel |
+|---|---|---|---|
+| `--paper` | `#f3f0e8` | `#131210` | Fundo |
+| `--paper-2` | `#ebe7dc` | `#1b1915` | Superfícies, capturas de trás |
+| `--page` | `#fbf9f3` | `#1b1915` | A página em destaque |
+| `--ink` | `#17150f` | `#ece8dd` | Texto, linhas e tarjas pretas |
+| `--ink-2` | `#4a463c` | `#b9b4a6` | Texto secundário |
+| `--rule` | `#cfc9ba` | `#37332b` | Linhas finas, barras de "texto" |
+| `--signal` | `#b43c0e` | `#f0885a` | **Única cor de acento** |
 
-Valores em [`assets/tokens.css`](../assets/tokens.css) (fonte única). As variantes "-d" existem para manter contraste legível em fundo claro.
-
-**Regra do âmbar:** use-o uma vez por composição, no elemento que o leitor deve notar. Âmbar em tudo é ruído.
+**Regra do sinal:** uma vez por composição, no elemento que o leitor deve notar (a observação arquivada, um alerta, o link ao passar o mouse). Sinal em tudo vira ruído.
 
 ## Tipografia
 
-Monoespaçada, para casar com terminal e hashes: `ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace`. Título em peso 700, corpo em 400.
+- **Título e marca:** Georgia bold, tracking −0,02 em (`-2` no banner); subtítulo em Georgia *itálico*.
+- **Rótulos:** monoespaçada em **CAIXA-ALTA**, negrito, espaçamento largo (`letter-spacing` 2 px), 11–12 px. Ex.: `WAYBACKATLAS / OSINT TEMPORAL EM ARQUIVOS WEB`, `TLP:CLEAR`.
+- **Corpo:** fonte do sistema (sans). **Código e hashes:** mono.
 
 ## Linguagem visual
 
-- **Grade** de 32 px em linhas finas, como papel milimetrado de mapa.
-- **Régua de capturas**: traços verticais de alturas variadas sobre uma linha; um deles destacado em âmbar.
-- Ícones de linha, cantos arredondados, traço 3–7 px conforme o tamanho.
+- **Cantos retos.** Nenhum raio, nenhuma sombra, nenhum degradê.
+- **Linhas finas de tinta** (1 px) separam seções; o sinal aparece em traços curtos de 4 px sob o título.
+- **Cabeçalho de documento:** linha de rótulo mono com a classificação (`TLP:CLEAR`) à direita, filete de tinta embaixo.
+- **Tarjas:** barras cinza (`--rule`) como texto, barra de tinta como redação, barra de sinal como achado.
+- Selos de status (shields) com `labelColor=17150f` e `color=b43c0e`.
 
-## Social preview
+## Regenerar os assets
 
-Gerada a partir do banner. Para regenerar (requer Chromium via Playwright ou similar):
+Logos, banners e social preview saem do mesmo gabarito, para manter as variantes consistentes. O social preview, a partir do HTML:
 
 ```bash
-make social
+make social CHROME=/caminho/do/chromium   # requer Chromium e ImageMagick
 ```
 
 Depois, em *Settings → General → Social preview* do GitHub, envie `assets/social-preview.png`.
 
-## Tópicos sugeridos para o repositório
+## Tópicos sugeridos
 
 `osint` · `wayback-machine` · `internet-archive` · `threat-intelligence` · `cdx-api` · `digital-forensics` · `python`

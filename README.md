@@ -1,9 +1,16 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-    <img src="assets/banner-dark.svg" alt="wayback/atlas — mapa de ferramentas e guia de campo para OSINT temporal" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner-light.svg" alt="WaybackAtlas: mapa e guia de campo para OSINT temporal na Wayback Machine" width="100%">
   </picture>
 </div>
+
+<p align="center">
+  <a href="https://github.com/Ridd1kulusC0d3r/waybackmachine/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Ridd1kulusC0d3r/waybackmachine/ci.yml?style=flat-square&label=CI&labelColor=17150f&color=b43c0e" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Ridd1kulusC0d3r/waybackmachine?style=flat-square&labelColor=17150f&color=4a463c" alt="MIT"></a>
+  <img src="https://img.shields.io/badge/modo-evid%C3%AAncia%20primeiro-4a463c?style=flat-square&labelColor=17150f" alt="Evidência primeiro">
+  <a href="https://github.com/Ridd1kulusC0d3r/LLmInjection"><img src="https://img.shields.io/badge/fam%C3%ADlia-LLmInjection-4a463c?style=flat-square&labelColor=17150f" alt="Família LLmInjection"></a>
+</p>
 
 <p align="center">
   <b>Mapa</b> das melhores ferramentas da Wayback Machine · <b>Guia</b> de uso passo a passo · <b>Método</b> para transformar capturas em evidência
