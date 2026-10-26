@@ -77,14 +77,14 @@ Os oito recursos iniciais focam Wayback e descoberta de URLs; os sete adicionais
 
 ### Complementares (fontes independentes e alternativas)
 
-Úteis para **corroborar** com outra fonte ou preservar sem publicar. Status `a-verificar`: sugeridas sem checagem da documentação atual.
+Úteis para **corroborar** com outra fonte ou preservar sem publicar. Três tiveram o README lido em 2026-10-26; o Common Crawl segue `a-verificar` (site inacessível na checagem). Manutenção ativa não foi auditada.
 
 <!-- extra:begin -->
 | Repositório | Para que serve | Avaliação |
 |---|---|---|
-| [jsvine/waybackpack](https://github.com/jsvine/waybackpack) | Baixa o histórico de capturas de uma página da Wayback Machine. | **Alternativa leve para guardar todas as versões de uma única URL.** |
-| [cocrawler/cdx_toolkit](https://github.com/cocrawler/cdx_toolkit) | Biblioteca/CLI para consultar índices CDX (Internet Archive e Common Crawl). | **Útil para cruzar a Wayback com o Common Crawl na mesma interface.** |
-| [oduwsdl/MemGator](https://github.com/oduwsdl/MemGator) | Agregador Memento: consulta vários arquivos web ao mesmo tempo. | **Boa para obter uma segunda fonte de arquivamento independente da Wayback.** |
+| [jsvine/waybackpack](https://github.com/jsvine/waybackpack) | Baixa todas as capturas de uma URL (ou só lista os timestamps com --list). | **Alternativa leve para guardar todas as versões de uma única URL.** |
+| [cocrawler/cdx_toolkit](https://github.com/cocrawler/cdx_toolkit) | Biblioteca e CLI (cdxt) para consultar índices CDX do Common Crawl e da Wayback Machine e extrair páginas para WARC, jsonl ou csv. | **Útil para cruzar a Wayback com o Common Crawl na mesma interface.** |
+| [oduwsdl/MemGator](https://github.com/oduwsdl/MemGator) | Agregador Memento em Go (CLI e servidor): consulta vários arquivos web e devolve TimeMap/TimeGate em link, JSON ou CDXJ. | **Boa para obter uma segunda fonte de arquivamento independente da Wayback.** |
 | [Common Crawl — índice de URLs](https://index.commoncrawl.org/) | Índice de URLs rastreadas pelo Common Crawl, fonte independente da Wayback. | **Corrobora existência de URLs sem depender do Internet Archive.** |
 <!-- extra:end -->
 

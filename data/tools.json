@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "note": "Curadoria documental ampliada em 2026-10-19. Status documentado significa leitura da documentação, não execução nem auditoria de manutenção ou segurança. Recursos complementares preservam ou reproduzem arquivos web; não são necessariamente clientes da Wayback. Cada projeto mantém sua própria licença. Entradas 'complementar' com status 'a-verificar' foram sugeridas sem checagem da documentação atual.",
+  "note": "Curadoria documental ampliada em 2026-10-19. Status documentado significa leitura da documentação, não execução nem auditoria de manutenção ou segurança. Recursos complementares preservam ou reproduzem arquivos web; não são necessariamente clientes da Wayback. Cada projeto mantém sua própria licença. Em 2026-10-26 os READMEs de waybackpack, cdx_toolkit e MemGator foram lidos e as fichas ajustadas; o índice do Common Crawl segue 'a-verificar' (site inacessível na checagem). Atividade e manutenção dos projetos não foram auditadas.",
   "roles": {
     "discover": "Descobrir URLs",
     "recover": "Recuperar conteúdo",
@@ -265,10 +265,10 @@
       "roles": [
         "recover"
       ],
-      "purpose": "Baixa o histórico de capturas de uma página da Wayback Machine.",
+      "purpose": "Baixa todas as capturas de uma URL (ou só lista os timestamps com --list).",
       "verdict": "Alternativa leve para guardar todas as versões de uma única URL.",
-      "caveat": "Confirme parâmetros e limites na documentação atual antes de usar.",
-      "status": "a-verificar",
+      "caveat": "Use --raw para obter o conteúdo sem processamento da Wayback e --uniques-only para pular repetições; defina --delay e --user-agent.",
+      "status": "documentado",
       "tier": "complementar"
     },
     {
@@ -281,10 +281,10 @@
         "discover",
         "analyze"
       ],
-      "purpose": "Biblioteca/CLI para consultar índices CDX (Internet Archive e Common Crawl).",
+      "purpose": "Biblioteca e CLI (cdxt) para consultar índices CDX do Common Crawl e da Wayback Machine e extrair páginas para WARC, jsonl ou csv.",
       "verdict": "Útil para cruzar a Wayback com o Common Crawl na mesma interface.",
-      "caveat": "Confirme o escopo atual do projeto na documentação.",
-      "status": "a-verificar",
+      "caveat": "O CDX do Common Crawl difere do da Wayback; a ferramenta esconde as diferenças só em parte. Sem parâmetros aplica limites padrão (1000 registros; 1 ano de índices do CC).",
+      "status": "documentado",
       "tier": "complementar"
     },
     {
@@ -296,10 +296,10 @@
       "roles": [
         "discover"
       ],
-      "purpose": "Agregador Memento: consulta vários arquivos web ao mesmo tempo.",
+      "purpose": "Agregador Memento em Go (CLI e servidor): consulta vários arquivos web e devolve TimeMap/TimeGate em link, JSON ou CDXJ.",
       "verdict": "Boa para obter uma segunda fonte de arquivamento independente da Wayback.",
-      "caveat": "Confirme a lista de arquivos suportados na documentação.",
-      "status": "a-verificar",
+      "caveat": "A lista de arquivos consultados é configurável (JSON local ou remoto); registre quais arquivos responderam em cada consulta.",
+      "status": "documentado",
       "tier": "complementar"
     },
     {

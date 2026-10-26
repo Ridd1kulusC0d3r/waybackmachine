@@ -2,7 +2,7 @@
 
 > Gerado por `scripts/build_catalog.py` a partir de `data/tools.json`. Não edite à mão.
 
-_Curadoria documental ampliada em 2026-10-19. Status documentado significa leitura da documentação, não execução nem auditoria de manutenção ou segurança. Recursos complementares preservam ou reproduzem arquivos web; não são necessariamente clientes da Wayback. Cada projeto mantém sua própria licença. Entradas 'complementar' com status 'a-verificar' foram sugeridas sem checagem da documentação atual._
+_Curadoria documental ampliada em 2026-10-19. Status documentado significa leitura da documentação, não execução nem auditoria de manutenção ou segurança. Recursos complementares preservam ou reproduzem arquivos web; não são necessariamente clientes da Wayback. Cada projeto mantém sua própria licença. Em 2026-10-26 os READMEs de waybackpack, cdx_toolkit e MemGator foram lidos e as fichas ajustadas; o índice do Common Crawl segue 'a-verificar' (site inacessível na checagem). Atividade e manutenção dos projetos não foram auditadas._
 
 ## Por papel na investigação
 
@@ -15,8 +15,8 @@ _Curadoria documental ampliada em 2026-10-19. Status documentado significa leitu
 - [edgi-govdata-archiving/wayback](https://github.com/edgi-govdata-archiving/wayback) — Cliente Python para pesquisar e recuperar capturas históricas, chamadas mementos.
 - [internetarchive/wayback — CDX Server](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) — Código e documentação do serviço de consulta ao índice de capturas.
 - [arquivo/pwa-technologies](https://github.com/arquivo/pwa-technologies) — Documenta tecnologias e APIs do Arquivo.pt, incluindo pesquisa de arquivos web.
-- [cocrawler/cdx_toolkit](https://github.com/cocrawler/cdx_toolkit) — Biblioteca/CLI para consultar índices CDX (Internet Archive e Common Crawl).
-- [oduwsdl/MemGator](https://github.com/oduwsdl/MemGator) — Agregador Memento: consulta vários arquivos web ao mesmo tempo.
+- [cocrawler/cdx_toolkit](https://github.com/cocrawler/cdx_toolkit) — Biblioteca e CLI (cdxt) para consultar índices CDX do Common Crawl e da Wayback Machine e extrair páginas para WARC, jsonl ou csv.
+- [oduwsdl/MemGator](https://github.com/oduwsdl/MemGator) — Agregador Memento em Go (CLI e servidor): consulta vários arquivos web e devolve TimeMap/TimeGate em link, JSON ou CDXJ.
 - [Common Crawl — índice de URLs](https://index.commoncrawl.org/) — Índice de URLs rastreadas pelo Common Crawl, fonte independente da Wayback.
 
 ### Recuperar conteúdo
@@ -29,14 +29,14 @@ _Curadoria documental ampliada em 2026-10-19. Status documentado significa leitu
 - [webrecorder/pywb](https://github.com/webrecorder/pywb) — Reproduz e grava arquivos web em uma infraestrutura própria.
 - [webrecorder/replayweb.page](https://github.com/webrecorder/replayweb.page) — Reproduz arquivos web diretamente no navegador.
 - [arquivo/pwa-technologies](https://github.com/arquivo/pwa-technologies) — Documenta tecnologias e APIs do Arquivo.pt, incluindo pesquisa de arquivos web.
-- [jsvine/waybackpack](https://github.com/jsvine/waybackpack) — Baixa o histórico de capturas de uma página da Wayback Machine.
+- [jsvine/waybackpack](https://github.com/jsvine/waybackpack) — Baixa todas as capturas de uma URL (ou só lista os timestamps com --list).
 
 ### Analisar no tempo
 
 - [edgi-govdata-archiving/wayback](https://github.com/edgi-govdata-archiving/wayback) — Cliente Python para pesquisar e recuperar capturas históricas, chamadas mementos.
 - [webrecorder/warcio](https://github.com/webrecorder/warcio) — Lê e escreve registros WARC e lê ARC em streaming.
 - [webrecorder/replayweb.page](https://github.com/webrecorder/replayweb.page) — Reproduz arquivos web diretamente no navegador.
-- [cocrawler/cdx_toolkit](https://github.com/cocrawler/cdx_toolkit) — Biblioteca/CLI para consultar índices CDX (Internet Archive e Common Crawl).
+- [cocrawler/cdx_toolkit](https://github.com/cocrawler/cdx_toolkit) — Biblioteca e CLI (cdxt) para consultar índices CDX do Common Crawl e da Wayback Machine e extrair páginas para WARC, jsonl ou csv.
 
 ### Preservar páginas
 
@@ -188,27 +188,27 @@ _Curadoria documental ampliada em 2026-10-19. Status documentado significa leitu
 
 ### jsvine/waybackpack
 
-- **Tipo:** cli · **Linguagem:** Python · **Nível:** complementar · **Status:** a-verificar
+- **Tipo:** cli · **Linguagem:** Python · **Nível:** complementar · **Status:** documentado
 - **Link:** <https://github.com/jsvine/waybackpack>
-- **Serve para:** Baixa o histórico de capturas de uma página da Wayback Machine.
+- **Serve para:** Baixa todas as capturas de uma URL (ou só lista os timestamps com --list).
 - **Avaliação:** Alternativa leve para guardar todas as versões de uma única URL.
-- **Cuidado:** Confirme parâmetros e limites na documentação atual antes de usar.
+- **Cuidado:** Use --raw para obter o conteúdo sem processamento da Wayback e --uniques-only para pular repetições; defina --delay e --user-agent.
 
 ### cocrawler/cdx_toolkit
 
-- **Tipo:** lib+cli · **Linguagem:** Python · **Nível:** complementar · **Status:** a-verificar
+- **Tipo:** lib+cli · **Linguagem:** Python · **Nível:** complementar · **Status:** documentado
 - **Link:** <https://github.com/cocrawler/cdx_toolkit>
-- **Serve para:** Biblioteca/CLI para consultar índices CDX (Internet Archive e Common Crawl).
+- **Serve para:** Biblioteca e CLI (cdxt) para consultar índices CDX do Common Crawl e da Wayback Machine e extrair páginas para WARC, jsonl ou csv.
 - **Avaliação:** Útil para cruzar a Wayback com o Common Crawl na mesma interface.
-- **Cuidado:** Confirme o escopo atual do projeto na documentação.
+- **Cuidado:** O CDX do Common Crawl difere do da Wayback; a ferramenta esconde as diferenças só em parte. Sem parâmetros aplica limites padrão (1000 registros; 1 ano de índices do CC).
 
 ### oduwsdl/MemGator
 
-- **Tipo:** cli+server · **Linguagem:** Go · **Nível:** complementar · **Status:** a-verificar
+- **Tipo:** cli+server · **Linguagem:** Go · **Nível:** complementar · **Status:** documentado
 - **Link:** <https://github.com/oduwsdl/MemGator>
-- **Serve para:** Agregador Memento: consulta vários arquivos web ao mesmo tempo.
+- **Serve para:** Agregador Memento em Go (CLI e servidor): consulta vários arquivos web e devolve TimeMap/TimeGate em link, JSON ou CDXJ.
 - **Avaliação:** Boa para obter uma segunda fonte de arquivamento independente da Wayback.
-- **Cuidado:** Confirme a lista de arquivos suportados na documentação.
+- **Cuidado:** A lista de arquivos consultados é configurável (JSON local ou remoto); registre quais arquivos responderam em cada consulta.
 
 ### Common Crawl — índice de URLs
 
