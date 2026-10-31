@@ -1,4 +1,4 @@
-# 10 · Psicologia: o adversário que sabe que é arquivado, e o analista que lê
+# 13 · Psicologia: o adversário que sabe que é arquivado, e o analista que lê
 
 Complementa [06](06-psicologia-investigativa.md). Lá: vieses de quem analisa. Aqui: **engano deliberado** e **desgaste** do próprio analista.
 

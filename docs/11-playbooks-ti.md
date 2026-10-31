@@ -1,4 +1,4 @@
-# 08 · Playbooks de inteligência de ameaças com a Wayback
+# 11 · Playbooks de inteligência de ameaças com a Wayback
 
 Seis cenários recorrentes. Cada um traz pergunta, passos, o que a evidência **prova e não prova**, e a armadilha típica. Todos assumem os cuidados de [05](05-cadeia-de-evidencia.md) e [07](07-etica-e-opsec.md) e usam os scripts do repositório. Variável usada nos exemplos: `ALVO=dominio.exemplo`.
 

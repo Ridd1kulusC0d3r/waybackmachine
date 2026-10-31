@@ -6,3 +6,7 @@ out/
 *.meta.json
 !examples/*.meta.json
 .DS_Store
+_site/
+.jekyll-cache/
+.sass-cache/
+Gemfile.lock

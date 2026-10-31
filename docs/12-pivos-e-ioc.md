@@ -1,4 +1,4 @@
-# 09 · Pivôs e IOCs extraídos de capturas
+# 12 · Pivôs e IOCs extraídos de capturas
 
 Um **pivô** é um dado que liga o objeto atual a outros. Um **IOC** é um indicador que se pode compartilhar. Um dado pode ser os dois, mas **nem todo pivô é um bom IOC**: um ID de analytics liga sites; não é "malicioso".
 

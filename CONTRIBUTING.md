@@ -25,3 +25,7 @@ Critérios de entrada:
 ## Documentos
 
 Português do Brasil, tom técnico e calibrado. Toda afirmação sobre o que a Wayback "prova" deve respeitar [docs/01-fundamentos.md](docs/01-fundamentos.md).
+
+## Site (GitHub Pages)
+
+O guia é publicado por `.github/workflows/pages.yml` (Jekyll, plugins do GitHub Pages) a cada push em `main` que altere docs, templates, assets ou dados. Requer **Settings → Pages → Source = GitHub Actions**. Para ver localmente: `bundle install && bundle exec jekyll serve`. O tema fica em `assets/css/style.scss`; mantenha as cores em sincronia com `assets/tokens.css`.

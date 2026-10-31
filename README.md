@@ -16,6 +16,8 @@
   <b>Mapa</b> das melhores ferramentas da Wayback Machine · <b>Guia</b> de uso passo a passo · <b>Método</b> para transformar capturas em evidência
 </p>
 
+<p align="center"><a href="https://ridd1kulusc0d3r.github.io/waybackmachine/"><b>Ler o guia online</b></a> · <a href="docs/README.md">Índice dos 15 guias</a></p>
+
 ---
 
 ## Por que existe
@@ -208,4 +210,4 @@ Gera `out/example.com/` com `cdx.csv` (+ `.meta.json`), `timeline.md`, `inventor
 └── .github/                  ← CI, templates de issue e PR
 ```
 
-Identidade visual e uso dos assets: [docs/identidade-visual.md](docs/identidade-visual.md). Contribuições: [CONTRIBUTING.md](CONTRIBUTING.md). Licença: [MIT](LICENSE).
+Identidade visual e uso dos assets: [docs/identidade-visual.md](docs/identidade-visual.md). Contribuições: [CONTRIBUTING.md](https://github.com/Ridd1kulusC0d3r/waybackmachine/blob/main/CONTRIBUTING.md). Licença: [MIT](LICENSE).

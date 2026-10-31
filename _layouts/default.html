@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'pt-BR' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/logo-light.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+  <header class="mast">
+    <div class="wrap mast-bar">
+      <a class="brand" href="{{ '/' | relative_url }}">WaybackAtlas{% unless page.url == '/' %} <span>/ OSINT temporal em arquivos web</span>{% endunless %}</a>
+      <nav aria-label="Principal">
+        <a href="{{ '/docs/' | relative_url }}">Guia</a>
+        <a href="{{ '/docs/catalogo.html' | relative_url }}">Catálogo</a>
+        <a href="{{ '/docs/11-playbooks-ti.html' | relative_url }}">Playbooks</a>
+        <a href="{{ '/docs/identidade-visual.html' | relative_url }}">Identidade</a>
+        <a href="https://github.com/Ridd1kulusC0d3r/waybackmachine">Repositório</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap page">
+    {% unless page.url == '/' %}{% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}{% endunless %}
+    {{ content }}
+  </main>
+  <footer class="wrap foot">
+    <span>Evidência acima de hype. A captura prova a observação, não a publicação.</span>
+    <span>MIT · TLP:CLEAR</span>
+  </footer>
+</body>
+</html>

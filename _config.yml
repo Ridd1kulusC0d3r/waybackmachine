@@ -1,0 +1,39 @@
+# Site do guia (Jekyll, plugins do GitHub Pages). Publicado por .github/workflows/pages.yml;
+# requer Settings > Pages > Source = "GitHub Actions".
+title: WaybackAtlas
+description: Mapa de ferramentas e guia de campo para OSINT temporal na Wayback Machine. O que o arquivo viu e o que ele não prova.
+lang: pt-BR
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+plugins:
+  - jekyll-readme-index
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
+  - jekyll-default-layout
+  - jekyll-seo-tag
+relative_links:
+  enabled: true
+  collections: false
+titles_from_headings:
+  enabled: true
+  strip_title: true
+  collections: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - tests
+  - out
+  - Makefile
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - assets/social-preview.html
+  - CONTRIBUTING.md

@@ -1,4 +1,4 @@
-# 11 · Shell cookbook para saídas da CDX
+# 14 · Shell cookbook para saídas da CDX
 
 Receitas com ferramentas padrão (`curl`, `awk`, `sort`, `uniq`, `comm`, `cut`, `jq`). Entradas: o TSV de `scripts/sh/wb-cdx.sh` (timestamp, original, status, mime, digest) ou o CSV de `wb_cdx.py` (com cabeçalho).
 
