@@ -20,6 +20,8 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Catálogo e README sincronizados
         run: python scripts/build_catalog.py --check
+      - name: Gráficos sincronizados
+        run: python scripts/build_charts.py --check
       - name: Shellcheck
         run: shellcheck -S style scripts/sh/*.sh
       - name: Testes

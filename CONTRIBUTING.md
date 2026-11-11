@@ -3,7 +3,7 @@
 ## Adicionar ou corrigir uma ferramenta
 
 1. Edite **somente** `data/tools.json` (siga o formato das entradas existentes; `roles` devem existir em `roles`).
-2. Rode `make catalog` para regenerar `README.md` (tabelas) e `docs/catalogo.md`.
+2. Rode `make catalog charts` para regenerar `README.md` (tabelas), `docs/catalogo.md` e `assets/tool-map.svg`. O **primeiro** item de `roles` é o papel principal da ferramenta (aparece em tom escuro no mapa).
 3. Rode `make test`.
 4. Abra o PR usando o template.
 

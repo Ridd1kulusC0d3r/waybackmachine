@@ -49,6 +49,19 @@ Os SVGs usam as cores de `tokens.css` embutidas (SVG em `<img>` não lê variáv
 - **Tarjas:** barras cinza (`--rule`) como texto, barra de tinta como redação, barra de sinal como achado.
 - Selos de status (shields) com `labelColor=17150f` e `color=b43c0e`.
 
+## Gráficos
+
+Os gráficos são gerados dos dados, no mesmo idioma do LLmInjection (`make charts`): cartão de papel com filete de tinta, título em Georgia, subtítulo e rótulos em mono, **um só matiz em escala** e quadrados tracejados para "vazio".
+
+| Token | Hex | Uso no gráfico |
+|---|---|---|
+| principal | `#b43c0e` | Papel principal da ferramenta (o primeiro de `roles`) |
+| secundário | `#e9b394` | Papel secundário |
+| vazio | `#cfc9ba` tracejado | Não se aplica |
+| sinal em texto | `#b43c0e` | O que é frágil: `A-VERIFICAR`, lacunas |
+
+O mapa atual: [`assets/tool-map.svg`](../assets/tool-map.svg), gerado por [`scripts/build_charts.py`](../scripts/build_charts.py) a partir de `data/tools.json`. O CI falha se estiver desatualizado.
+
 ## Regenerar os assets
 
 Logos, banners e social preview saem do mesmo gabarito, para manter as variantes consistentes. O social preview, a partir do HTML:

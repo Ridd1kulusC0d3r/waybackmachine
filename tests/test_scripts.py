@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import build_catalog  # noqa: E402
+import build_charts  # noqa: E402
 import wb_cdx  # noqa: E402
 import wb_diff  # noqa: E402
 import wb_timeline  # noqa: E402
@@ -119,6 +120,21 @@ class CatalogTests(unittest.TestCase):
 
     def test_generated_files_up_to_date(self):
         self.assertEqual(subprocess.run([sys.executable, str(ROOT / "scripts" / "build_catalog.py"), "--check"]).returncode, 0)
+
+
+class ChartTests(unittest.TestCase):
+    def test_tool_map_in_sync_and_flags_unchecked(self):
+        data = json.loads(build_charts.DATA.read_text(encoding="utf-8"))
+        svg = build_charts.render(data)
+        self.assertEqual(build_charts.OUT.read_text(encoding="utf-8"), svg)
+        self.assertIn(f">{len(data['tools'])}<tspan", svg)
+        self.assertIn("A-VERIFICAR", svg)
+        self.assertNotIn("<script", svg)
+
+    def test_names_are_escaped(self):
+        data = {"roles": {"discover": "d"}, "tools": [{"name": "a&b <x>", "kind": "cli", "roles": ["discover"], "status": "documentado"}]}
+        svg = build_charts.render(data)
+        self.assertIn("a&amp;b &lt;x&gt;", svg)
 
 
 if __name__ == "__main__":

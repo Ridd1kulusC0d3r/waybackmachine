@@ -64,6 +64,8 @@ Os oito recursos iniciais focam Wayback e descoberta de URLs; os sete adicionais
 
 ## Mapa de repositórios
 
+<img src="assets/tool-map.svg" alt="Mapa de ferramentas: papel de cada projeto na investigação (descobrir, recuperar, analisar, preservar, referência) e status da curadoria" width="100%">
+
 <!-- tools:begin -->
 | Repositório | Para que serve | Avaliação |
 |---|---|---|

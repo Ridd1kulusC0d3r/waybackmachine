@@ -1,4 +1,4 @@
-.PHONY: test catalog check lint social
+.PHONY: test catalog charts check lint social
 
 test:
 	python3 -m unittest discover -s tests -v
@@ -6,8 +6,12 @@ test:
 catalog:
 	python3 scripts/build_catalog.py
 
+charts:
+	python3 scripts/build_charts.py
+
 check:
 	python3 scripts/build_catalog.py --check
+	python3 scripts/build_charts.py --check
 
 lint:
 	shellcheck -S style scripts/sh/*.sh

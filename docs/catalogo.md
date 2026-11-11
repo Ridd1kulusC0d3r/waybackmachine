@@ -4,6 +4,8 @@
 
 _Curadoria documental ampliada em 2026-10-19. Status documentado significa leitura da documentação, não execução nem auditoria de manutenção ou segurança. Recursos complementares preservam ou reproduzem arquivos web; não são necessariamente clientes da Wayback. Cada projeto mantém sua própria licença. Em 2026-10-26 os READMEs de waybackpack, cdx_toolkit e MemGator foram lidos e as fichas ajustadas; o índice do Common Crawl segue 'a-verificar' (site inacessível na checagem). Atividade e manutenção dos projetos não foram auditadas._
 
+<img src="../assets/tool-map.svg" alt="Mapa de ferramentas por papel e status da curadoria" width="100%">
+
 ## Por papel na investigação
 
 ### Descobrir URLs

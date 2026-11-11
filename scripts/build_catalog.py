@@ -44,6 +44,8 @@ def catalog_md(data: dict) -> str:
         "",
         f"_{data['note']}_",
         "",
+        '<img src="../assets/tool-map.svg" alt="Mapa de ferramentas por papel e status da curadoria" width="100%">',
+        "",
         "## Por papel na investigação",
         "",
     ]

@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="834" viewBox="0 0 1210 834" role="img" aria-labelledby="t">
+<title id="t">Mapa de ferramentas: papel de cada projeto na investigação e status da curadoria</title>
+<rect width="1210" height="834" fill="#f3f0e8"/>
+<rect x=".5" y=".5" width="1209" height="833" fill="none" stroke="#17150f"/>
+<text x="40" y="44" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#17150f">Mapa de ferramentas</text>
+<text x="40" y="64" font-family="'Courier New',monospace" font-size="11" fill="#7b766a">Papel de cada projeto na investigação e o que a curadoria realmente verificou.</text>
+<text x="1170" y="44" text-anchor="end" font-family="'Courier New',monospace" font-size="22" font-weight="700" fill="#17150f">19<tspan font-size="12" fill="#7b766a"> projetos</tspan></text>
+<text x="1170" y="64" text-anchor="end" font-family="'Courier New',monospace" font-size="11" font-weight="700" fill="#b43c0e">1 sem checagem da documentação</text>
+<text x="740.0" y="78" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#7b766a">PAPEL NA INVESTIGAÇÃO</text>
+<line x1="496" x2="984" y1="84" y2="84" stroke="#17150f" stroke-width="1.5"/>
+<text x="540.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">DESCOBRIR</text>
+<text x="640.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">RECUPERAR</text>
+<text x="740.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">ANALISAR</text>
+<text x="840.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">PRESERVAR</text>
+<text x="940.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">REFERÊNCIA</text>
+<text x="1020" y="100" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">NÍVEL · STATUS</text>
+<line x1="40" x2="1170" y1="106" y2="106" stroke="#17150f"/>
+<text x="40" y="127" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">cli</text>
+<text x="140" y="127" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">xnl-h4ck3r/waymore</text>
+<rect x="523.0" y="112" width="34" height="20" fill="#b43c0e"/>
+<rect x="623.0" y="112" width="34" height="20" fill="#e9b394"/>
+<rect x="723.0" y="112" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="112" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="112" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="127" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="159" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">cli</text>
+<text x="140" y="159" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">tomnomnom/waybackurls</text>
+<rect x="523.0" y="144" width="34" height="20" fill="#b43c0e"/>
+<rect x="623.0" y="144" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="723.0" y="144" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="144" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="144" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="159" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="191" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">cli</text>
+<text x="140" y="191" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">lc/gau</text>
+<rect x="523.0" y="176" width="34" height="20" fill="#b43c0e"/>
+<rect x="623.0" y="176" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="723.0" y="176" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="176" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="176" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="191" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="223" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">lib+cli</text>
+<text x="140" y="223" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">akamhy/waybackpy</text>
+<rect x="523.0" y="208" width="34" height="20" fill="#b43c0e"/>
+<rect x="623.0" y="208" width="34" height="20" fill="#e9b394"/>
+<rect x="723.0" y="208" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="208" width="34" height="20" fill="#e9b394"/>
+<rect x="923.0" y="208" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="223" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="255" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">lib</text>
+<text x="140" y="255" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">edgi-govdata-archiving/wayback</text>
+<rect x="523.0" y="240" width="34" height="20" fill="#b43c0e"/>
+<rect x="623.0" y="240" width="34" height="20" fill="#e9b394"/>
+<rect x="723.0" y="240" width="34" height="20" fill="#e9b394"/>
+<rect x="823.0" y="240" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="240" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="255" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="287" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">cli</text>
+<text x="140" y="287" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">hartator/wayback-machine-downloader</text>
+<rect x="523.0" y="272" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="623.0" y="272" width="34" height="20" fill="#b43c0e"/>
+<rect x="723.0" y="272" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="272" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="272" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="287" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="319" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">extension</text>
+<text x="140" y="319" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">internetarchive/wayback-machine-webextension</text>
+<rect x="523.0" y="304" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="623.0" y="304" width="34" height="20" fill="#e9b394"/>
+<rect x="723.0" y="304" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="304" width="34" height="20" fill="#b43c0e"/>
+<rect x="923.0" y="304" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="319" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="351" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">api</text>
+<text x="140" y="351" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">internetarchive/wayback — CDX Server</text>
+<rect x="523.0" y="336" width="34" height="20" fill="#e9b394"/>
+<rect x="623.0" y="336" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="723.0" y="336" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="336" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="336" width="34" height="20" fill="#b43c0e"/>
+<text x="1020" y="351" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="383" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">lib+server</text>
+<text x="140" y="383" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">webrecorder/pywb</text>
+<rect x="523.0" y="368" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="623.0" y="368" width="34" height="20" fill="#b43c0e"/>
+<rect x="723.0" y="368" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="368" width="34" height="20" fill="#e9b394"/>
+<rect x="923.0" y="368" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="383" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="415" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">lib+cli</text>
+<text x="140" y="415" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">webrecorder/warcio</text>
+<rect x="523.0" y="400" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="623.0" y="400" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="723.0" y="400" width="34" height="20" fill="#b43c0e"/>
+<rect x="823.0" y="400" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="400" width="34" height="20" fill="#e9b394"/>
+<text x="1020" y="415" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="447" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">crawler</text>
+<text x="140" y="447" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">webrecorder/browsertrix-crawler</text>
+<rect x="523.0" y="432" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="623.0" y="432" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="723.0" y="432" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="432" width="34" height="20" fill="#b43c0e"/>
+<rect x="923.0" y="432" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="447" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="479" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">extension</text>
+<text x="140" y="479" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">webrecorder/archiveweb.page</text>
+<rect x="523.0" y="464" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="623.0" y="464" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="723.0" y="464" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="464" width="34" height="20" fill="#b43c0e"/>
+<rect x="923.0" y="464" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="479" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="511" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">viewer</text>
+<text x="140" y="511" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">webrecorder/replayweb.page</text>
+<rect x="523.0" y="496" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="623.0" y="496" width="34" height="20" fill="#b43c0e"/>
+<rect x="723.0" y="496" width="34" height="20" fill="#e9b394"/>
+<rect x="823.0" y="496" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="496" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="511" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="543" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">platform</text>
+<text x="140" y="543" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">ArchiveBox/ArchiveBox</text>
+<rect x="523.0" y="528" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="623.0" y="528" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="723.0" y="528" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="528" width="34" height="20" fill="#b43c0e"/>
+<rect x="923.0" y="528" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="543" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="575" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">api+reference</text>
+<text x="140" y="575" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">arquivo/pwa-technologies</text>
+<rect x="523.0" y="560" width="34" height="20" fill="#b43c0e"/>
+<rect x="623.0" y="560" width="34" height="20" fill="#e9b394"/>
+<rect x="723.0" y="560" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="560" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="560" width="34" height="20" fill="#e9b394"/>
+<text x="1020" y="575" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">CORE<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<line x1="40" x2="1170" y1="586" y2="586" stroke="#17150f" stroke-dasharray="3 2"/>
+<text x="40" y="607" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">cli</text>
+<text x="140" y="607" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">jsvine/waybackpack</text>
+<rect x="523.0" y="592" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="623.0" y="592" width="34" height="20" fill="#b43c0e"/>
+<rect x="723.0" y="592" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="592" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="592" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="607" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">COMPL.<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="639" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">lib+cli</text>
+<text x="140" y="639" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">cocrawler/cdx_toolkit</text>
+<rect x="523.0" y="624" width="34" height="20" fill="#b43c0e"/>
+<rect x="623.0" y="624" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="723.0" y="624" width="34" height="20" fill="#e9b394"/>
+<rect x="823.0" y="624" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="624" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="639" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">COMPL.<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="671" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">cli+server</text>
+<text x="140" y="671" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">oduwsdl/MemGator</text>
+<rect x="523.0" y="656" width="34" height="20" fill="#b43c0e"/>
+<rect x="623.0" y="656" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="723.0" y="656" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="656" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="656" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="1020" y="671" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">COMPL.<tspan fill="#7b766a" font-weight="400">  DOCUMENTADO</tspan></text>
+<text x="40" y="703" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">api</text>
+<text x="140" y="703" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">Common Crawl — índice de URLs</text>
+<rect x="523.0" y="688" width="34" height="20" fill="#b43c0e"/>
+<rect x="623.0" y="688" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="723.0" y="688" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="823.0" y="688" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="923.0" y="688" width="34" height="20" fill="#e9b394"/>
+<text x="1020" y="703" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#4a463c" font-weight="700">COMPL.<tspan fill="#b43c0e" font-weight="700">  A-VERIFICAR</tspan></text>
+<line x1="40" x2="1170" y1="714" y2="714" stroke="#17150f"/>
+<text x="40" y="749" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#4a463c">ESCALA</text>
+<rect x="116" y="738" width="28" height="16" fill="#b43c0e"/>
+<rect x="152" y="738" width="28" height="16" fill="#e9b394"/>
+<rect x="188" y="738" width="28" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="230" y="750" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Escuro: papel principal (o primeiro de roles). Claro: papel secundário. Tracejado: não se aplica.</text>
+<text x="40" y="778" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">DOCUMENTADO: a documentação foi lida. A-VERIFICAR: sugerida sem checagem. Ler não é executar, e manutenção ativa não foi auditada.</text>
+<text x="40" y="794" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Gerado de data/tools.json. Para atualizar: edite o JSON e rode make charts.</text>
+</svg>
